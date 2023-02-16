@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin</title>
+    <link rel="stylesheet" href="./dist/admin.css">
     <script src="./dist/views.js" defer></script>
     <script src="./dist/models.js" defer></script>
     <script src="./dist/admin.js" defer></script>
 </head>
 <body>
-    <form id="theForm">
+    <form class="form" id="theForm">
         <input type="text" name="name" placeholder="Name" required>
         <textarea name="details"cols="30" rows="10" placeholder="Details" required></textarea>
         <input type="number" name="price" placeholder="Price" required>
         <input type="text" name="img" placeholder="Image URL (optional)">
-        <input type="submit" value="Submit">
+        <input class="btn" type="submit" value="Submit">
     </form>
     <div class="display">
         
     </div>
+    <div id="change"></div>
 </body>
 </html>

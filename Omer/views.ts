@@ -15,3 +15,5 @@ function getItems():Item[]|null {
 }
 //form
 const form = document.getElementById("theForm");
+//change form
+const change = <HTMLElement>document.querySelector("#change");

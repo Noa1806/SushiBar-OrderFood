@@ -18,3 +18,5 @@ function getItems() {
 }
 //form
 var form = document.getElementById("theForm");
+//change form
+var change = document.querySelector("#change");
