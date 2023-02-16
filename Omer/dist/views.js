@@ -20,3 +20,5 @@ function getItems() {
 var form = document.getElementById("theForm");
 //change form
 var change = document.querySelector("#change");
+//form reaviling button
+var revealBtn = document.getElementById("formBtn");

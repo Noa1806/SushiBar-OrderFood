@@ -40,6 +40,25 @@ try {
 } catch (error) {
     console.error(error);
 }
+//revealing adding form
+let changeBoolean = true;
+try {
+    if(!revealBtn) throw new Error("No HTML element");
+    revealBtn.addEventListener("click", () => {
+        if(!form) throw new Error("Form not found");
+        if(changeBoolean) {
+            form.classList.remove("none");
+            revealBtn.innerText = "Dismiss"
+            changeBoolean = false;
+        } else {
+            form.classList.add("none");
+            revealBtn.innerText = "Add"
+            changeBoolean = true;
+        }
+    });
+} catch (error) {
+    console.error(error);
+}
 //render
 function renderToAdmin(whereTo: string, items: Item[] | null) {
     const display = <HTMLElement>document.querySelector(whereTo);

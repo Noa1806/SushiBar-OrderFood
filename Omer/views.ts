@@ -17,3 +17,5 @@ function getItems():Item[]|null {
 const form = document.getElementById("theForm");
 //change form
 const change = <HTMLElement>document.querySelector("#change");
+//form reaviling button
+const revealBtn = document.getElementById("formBtn");

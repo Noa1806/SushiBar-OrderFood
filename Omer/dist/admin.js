@@ -44,6 +44,29 @@ try {
 catch (error) {
     console.error(error);
 }
+//revealing adding form
+var changeBoolean = true;
+try {
+    if (!revealBtn)
+        throw new Error("No HTML element");
+    revealBtn.addEventListener("click", function () {
+        if (!form)
+            throw new Error("Form not found");
+        if (changeBoolean) {
+            form.classList.remove("none");
+            revealBtn.innerText = "Dismiss";
+            changeBoolean = false;
+        }
+        else {
+            form.classList.add("none");
+            revealBtn.innerText = "Add";
+            changeBoolean = true;
+        }
+    });
+}
+catch (error) {
+    console.error(error);
+}
 //render
 function renderToAdmin(whereTo, items) {
     var display = document.querySelector(whereTo);

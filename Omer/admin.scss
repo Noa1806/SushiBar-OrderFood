@@ -12,16 +12,16 @@ button, .btn {
     cursor: pointer;
 }
 
-.none {
-    display: none;
-}
-
 .form {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.none {
+    display: none;
 }
 
 .form>* {
@@ -49,4 +49,18 @@ button, .btn {
         }
     }
 
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    img {
+        width: 50px;
+        aspect-ratio: 1/1;
+    }
+    i {
+        cursor: pointer;
+    }
 }

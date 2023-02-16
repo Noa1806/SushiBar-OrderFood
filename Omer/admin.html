@@ -7,21 +7,27 @@
     <title>SushiBar-Admin</title>
     <link rel="stylesheet" href="./dist/admin.css">
     <link rel="shortcut icon" href="/images/favicon (2).ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/6cf7873aa7.js" crossorigin="anonymous" defer></script>
     <script src="./dist/views.js" defer></script>
     <script src="./dist/models.js" defer></script>
     <script src="./dist/admin.js" defer></script>
 </head>
 <body>
-    <form class="form" id="theForm">
+    <div class="top">
+        <i class="fa-solid fa-arrow-left fa-xl"></i>
+        <img src="../images/logo.png" alt="sushi-logo">
+    </div>
+    <div class="display">
+        
+    </div>
+    <a href="#theForm"><button id="formBtn">Add</button></a>
+    <div id="change"></div>
+    <form class="form none" id="theForm">
         <input type="text" name="name" placeholder="Name" required>
         <textarea name="details"cols="30" rows="10" placeholder="Details" required></textarea>
         <input type="number" name="price" placeholder="Price" required>
         <input type="text" name="img" placeholder="Image URL (optional)">
         <input class="btn" type="submit" value="Submit">
     </form>
-    <div class="display">
-        
-    </div>
-    <div id="change"></div>
 </body>
 </html>
