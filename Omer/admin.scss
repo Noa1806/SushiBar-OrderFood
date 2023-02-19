@@ -29,6 +29,13 @@ button:hover, .btn:hover {
     color: rgb(198, 197, 197);
 }
 
+#formBtn {
+    position: relative;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+
 .form {
     margin: 0 auto;
     display: flex;
@@ -48,6 +55,7 @@ button:hover, .btn:hover {
 }
 
 .display {
+    margin-bottom: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
