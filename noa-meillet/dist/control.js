@@ -1,5 +1,14 @@
-//ADD FUNCTION TO MOVE TO THE CUSTOMER PAGE
-//goToCstmrPage()
+function goToCstmrPage() {
+    try {
+        if (!logInForm)
+            throw new Error("there is no log In form");
+        logInForm.innerHTML = "";
+        //ENTER THE LINK TO THE CUSTOMER PAGE
+    }
+    catch (error) {
+        console.error("The system failed");
+    }
+}
 function addLogInForm() {
     try {
         if (!logInForm)

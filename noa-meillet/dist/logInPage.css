@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap");
+body {
+  scroll-behavior: smooth;
+  background-color: #F9F5E7;
+  font-family: "Open Sans", sans-serif;
+}
+body .logo {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  margin: 0 auto;
+}
+body .logo img {
+  width: 100px;
+}
+body .logo h1 {
+  margin: auto 5%;
+}
+body #log_in_form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 0;
+}
+body .control_btn, body .log_in_form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: max-content;
+  margin: 10% auto;
+}
+body .control_btn .input, body .log_in_form .input {
+  font-family: "Ubuntu", sans-serif;
+}
+body .control_btn button, body .control_btn #log_in_btn, body .log_in_form button, body .log_in_form #log_in_btn {
+  cursor: pointer;
+  color: white;
+  width: 100px;
+  height: 30px;
+  font-size: larger;
+  border: none;
+  border-radius: 5px;
+  background-color: #A7727D;
+  margin: auto;
+}
+body .control_btn button:hover, body .control_btn #log_in_btn:hover, body .log_in_form button:hover, body .log_in_form #log_in_btn:hover {
+  color: #c6c5c5;
+}

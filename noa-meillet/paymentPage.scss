@@ -1,0 +1,17 @@
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: #EDDBC7;
+    margin-bottom: 20px;
+
+    img {
+        width: 50px;
+        aspect-ratio: 1/1;
+    }
+
+    i {
+        cursor: pointer;
+    }
+}
