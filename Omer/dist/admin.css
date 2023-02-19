@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,13 @@ body,
 html {
   scroll-behavior: smooth;
   background-color: #F9F5E7;
+  font-family: "Open Sans", sans-serif;
+}
+body h1, body h2, body h3,
+html h1,
+html h2,
+html h3 {
+  font-family: "Ubuntu", sans-serif;
 }
 
 button,
@@ -101,6 +109,8 @@ button:hover, .btn:hover {
   align-items: center;
   justify-content: space-between;
   padding: 5px 20px;
+  background-color: #EDDBC7;
+  margin-bottom: 20px;
 }
 .top img {
   width: 50px;
@@ -108,4 +118,28 @@ button:hover, .btn:hover {
 }
 .top i {
   cursor: pointer;
+}
+
+@media screen and (max-width: 590px) {
+  .display__card {
+    flex-direction: column;
+    width: 250px;
+  }
+  .display__card__item {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+  }
+  .display__card__item__headlineImg {
+    margin-right: 0px;
+  }
+  .display__card__item__headlineImg img {
+    width: 250px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+  }
+  .display__card__item__details {
+    margin-left: 10px;
+  }
 }

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +9,10 @@ body,
 html {
     scroll-behavior: smooth;
     background-color: #F9F5E7;
+    font-family: 'Open Sans', sans-serif;
+    h1,h2,h3 {
+        font-family: 'Ubuntu', sans-serif;
+    }
 }
 
 button,
@@ -110,6 +115,8 @@ button:hover, .btn:hover {
     align-items: center;
     justify-content: space-between;
     padding: 5px 20px;
+    background-color: #EDDBC7;
+    margin-bottom: 20px;
 
     img {
         width: 50px;
@@ -118,5 +125,31 @@ button:hover, .btn:hover {
 
     i {
         cursor: pointer;
+    }
+}
+@media screen and (max-width: 590px)  {
+    .display {
+        &__card {
+            flex-direction: column;
+            width: 250px;
+            &__item {
+                width: 100%;
+                flex-direction: column;
+                height: auto;
+                &__headlineImg {
+                    img {
+                        width: 250px;
+                        aspect-ratio: 1/1;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+    
+                    margin-right: 0px;
+                }
+                &__details {
+                    margin-left: 10px;
+                }
+            }
+        }
     }
 }
