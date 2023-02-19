@@ -68,10 +68,14 @@ function renderToAdmin(whereTo: string, items: Item[] | null) {
         return `
         <div class="display__card">
             <div class="display__card__item">
-                <h2>${item.name}</h2>
-                <img src="${item.img}" width="100px" height="100px">
-                <h4>${item.details}</h4>
-                <h5>${item.price}$</h5>
+                <div class="display__card__item__headlineImg">
+                    <img src="${item.img}" width="100px" height="100px">
+                </div>
+                <div class="display__card__item__details">
+                    <h2>${item.name}</h2>
+                    <h5>${item.details}</h5>
+                    <h4>${item.price}$</h4>
+                </div>
             </div>
             <div class="display__card__change">
                 <button id="delete" onclick="deleteFromAdmin('${item.id}')">Delete</button>

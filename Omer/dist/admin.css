@@ -4,12 +4,24 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   scroll-behavior: smooth;
+  background-color: #F9F5E7;
 }
 
-button, .btn {
+button,
+.btn {
   cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 5px;
+  background-color: #A7727D;
+}
+
+button:hover, .btn:hover {
+  color: #c6c5c5;
 }
 
 .form {
@@ -30,14 +42,50 @@ button, .btn {
   padding: 2px;
 }
 
+.display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 .display__card {
-  padding: 5px;
-  border: 2px solid black;
-  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 10px;
+  position: relative;
+  width: 60%;
+  max-width: 450px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 200px;
+  padding-right: 10px;
+}
+.display__card__item {
+  width: 80%;
+  height: 150px;
+  display: flex;
+  align-items: start;
+}
+.display__card__item__headlineImg {
+  margin-right: 10px;
+}
+.display__card__item__headlineImg img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+.display__card__item__details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+.display__card__item__details h4 {
+  color: #A7727D;
 }
 .display__card__change {
   display: flex;

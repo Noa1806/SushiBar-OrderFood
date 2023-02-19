@@ -75,7 +75,7 @@ function renderToAdmin(whereTo, items) {
     if (!items)
         throw new Error("Items empty");
     var html = items.map(function (item) {
-        return "\n        <div class=\"display__card\">\n            <div class=\"display__card__item\">\n                <h2>" + item.name + "</h2>\n                <img src=\"" + item.img + "\" width=\"100px\" height=\"100px\">\n                <h4>" + item.details + "</h4>\n                <h5>" + item.price + "$</h5>\n            </div>\n            <div class=\"display__card__change\">\n                <button id=\"delete\" onclick=\"deleteFromAdmin('" + item.id + "')\">Delete</button>\n                <a href=\"#change\"><button id=\"update\" onclick=\"updateFromAdmin('" + item.id + "')\">Uptade</button></a>\n            </div>\n        </div>\n        ";
+        return "\n        <div class=\"display__card\">\n            <div class=\"display__card__item\">\n                <div class=\"display__card__item__headlineImg\">\n                    <img src=\"" + item.img + "\" width=\"100px\" height=\"100px\">\n                </div>\n                <div class=\"display__card__item__details\">\n                    <h2>" + item.name + "</h2>\n                    <h5>" + item.details + "</h5>\n                    <h4>" + item.price + "$</h4>\n                </div>\n            </div>\n            <div class=\"display__card__change\">\n                <button id=\"delete\" onclick=\"deleteFromAdmin('" + item.id + "')\">Delete</button>\n                <a href=\"#change\"><button id=\"update\" onclick=\"updateFromAdmin('" + item.id + "')\">Uptade</button></a>\n            </div>\n        </div>\n        ";
     }).join("\n");
     display.innerHTML = html;
 }
