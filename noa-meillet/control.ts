@@ -42,3 +42,33 @@ function logInToAdminPage(event): void {
     console.error(`something don't work with the log in function`);
   }
 }
+
+function takeawayChecked(){
+    if(!cstDetailsForm) throw new Error(`there is no payment form`);
+    cstDetailsForm.innerHTML = `
+    <input type="submit" value="Next" class="btn">
+    `;
+}
+
+function deliverChecked(){
+    if(!cstDetailsForm) throw new Error(`there is no payment form`);
+    cstDetailsForm.innerHTML = `
+    <input type="submit" value="Next" class="btn">
+    `;
+}
+
+function showPaymentForm() {
+  try {
+    if (!paymentForm) throw new Error(`there is no payment form`);
+    paymentForm.innerHTML = `
+    <div class="paymentChoice">
+    <input type="radio" name="payment" class="input" id="choice1" onclick="visaCardChecked()"/>
+    <label for="choice1">Visa Card</label>
+    <input type="radio" name="payment" class="input" id="choice2"/>
+    <label for="choice2">Cash</label>
+    </div>
+    `;
+  } catch (error) {
+    console.error(`something don't work with the load of the customer details`);
+  }
+}

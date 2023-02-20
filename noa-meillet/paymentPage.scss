@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap');
 .top {
     display: flex;
     align-items: center;
@@ -11,7 +12,35 @@
         aspect-ratio: 1/1;
     }
 
+    h1{
+        font-family: 'Open Sans', sans-serif;
+    }
+
     i {
         cursor: pointer;
+    }
+}
+
+.customer_details{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    margin: 0 auto;
+    gap: 10px;
+
+    .btn{
+        cursor: pointer;
+        color: white;
+        width: 70px;
+        height: 30px;
+        font-size: larger;
+        border: none;
+        border-radius: 5px;
+        background-color: #A7727D;
+        margin-left: 100%;
+    }
+    
+    .btn:hover{
+        color: rgb(198, 197, 197);
     }
 }

@@ -11,6 +11,7 @@
     />
     <title>SushiBar-Payment Page</title>
     <link rel="stylesheet" href="./dist/paymentPage.css" />
+    <script src="https://kit.fontawesome.com/6cf7873aa7.js" crossorigin="anonymous" defer></script>
     <script src="./dist/view.js" defer></script>
     <script src="./dist/model.js" defer></script>
     <script src="./dist/control.js" defer></script>
@@ -20,10 +21,20 @@
 <body>
     <div class="top">
         <i class="fa-solid fa-arrow-left fa-xl"></i>
+        <h1>SUSHI BAR</h1>
         <img src="../images/logo.png" alt="sushi-logo">
     </div>
-    <form>
-        <input type="text" name="fullname">
+    <form class="customer_details" onsubmit="showPaymentForm()">
+        <input type="text" name="fullName" class="input" placeholder="Enter your full name" required/>
+        <input type="text" name="phoneNumber" class="input" placeholder="Enter your phone number" required/>
+        <input type="email" name="email" class="input" placeholder="Enter your email adress" required/>
+        <div class="adressChoice">
+            <input type="radio" name="adress" class="input" id="choice1" onclick="takeawayChecked()"/>
+            <label for="choice1">Takeaway</label>
+            <input type="radio" name="adress" class="input" id="choice2" onclick="deliverChecked()"/>
+            <label for="choice2">Deliver</label>
+        </div>
     </form>
+    <form class="payment_form" onsubmit="pay()"></form>
 </body>
 </html>
