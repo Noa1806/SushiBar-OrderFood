@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #F9F5E7;
+}
+body .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: #EDDBC7;
+  margin-bottom: 20px;
+}
+body .top img {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+body .top i {
+  cursor: pointer;
+}
+
+.menu {
+  margin: auto;
+  width: 80%;
+  height: 1000px;
+  border-radius: 20px;
+}
+.menu__meal {
+  margin: auto;
+  height: 170px;
+  width: 100%;
+  border: solid 2px black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__meal__img {
+  width: 15%;
+  height: 100%;
+  border-radius: 20px;
+}
+.menu__meal__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.menu__meal__details {
+  width: 75%;
+  height: 170px;
+}
+.menu__meal__details__name {
+  width: 25%;
+  height: 30%;
+  font-weight: bold;
+  font-size: xx-large;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+.menu__meal__details__detailsWrapper {
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+.menu__meal__details__detailsWrapper__description {
+  width: 90%;
+  height: 70%;
+  font-size: large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding-top: 40px;
+  padding-left: 15px;
+}
+.menu__meal__details__detailsWrapper__price {
+  width: 10%;
+  height: 100%;
+  font-size: x-large;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.menu__meal__btnAdd {
+  width: 10%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu__meal__btnAdd button {
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: large;
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.579);
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 55px;
+}
