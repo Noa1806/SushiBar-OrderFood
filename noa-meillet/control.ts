@@ -43,16 +43,23 @@ function logInToAdminPage(event): void {
   }
 }
 
-function takeawayChecked(){
-    if(!cstDetailsForm) throw new Error(`there is no payment form`);
-    cstDetailsForm.innerHTML = `
+function takeawayChecked() {
+  if (!restaurantSelectList) throw new Error(`there is no select list for restaurant`);
+  restaurantList.forEach((restaurant) => {
+    restaurantSelectList.innerHTML += `
+    <option value="${restaurant.name}"></option>
+    `;
+  });
+  if (!cstDetailsForm) throw new Error(`there is no payment form`);
+  cstDetailsForm.innerHTML += `
     <input type="submit" value="Next" class="btn">
     `;
 }
 
-function deliverChecked(){
-    if(!cstDetailsForm) throw new Error(`there is no payment form`);
-    cstDetailsForm.innerHTML = `
+function deliverChecked() {
+  if (!cstDetailsForm) throw new Error(`there is no payment form`);
+  cstDetailsForm.innerHTML += `
+    <input type="text" name="customerAdress" class="input" placeholder="Enter your full adress" required/>
     <input type="submit" value="Next" class="btn">
     `;
 }

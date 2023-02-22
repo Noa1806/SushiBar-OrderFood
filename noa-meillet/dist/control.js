@@ -42,14 +42,19 @@ function logInToAdminPage(event) {
     }
 }
 function takeawayChecked() {
+    if (!restaurantSelectList)
+        throw new Error("there is no select list for restaurant");
+    restaurantList.forEach(function (restaurant) {
+        restaurantSelectList.innerHTML += "\n    <option value=\"" + restaurant.name + "\"></option>\n    ";
+    });
     if (!cstDetailsForm)
         throw new Error("there is no payment form");
-    cstDetailsForm.innerHTML = "\n    <input type=\"submit\" value=\"Next\" class=\"btn\">\n    ";
+    cstDetailsForm.innerHTML += "\n    <input type=\"submit\" value=\"Next\" class=\"btn\">\n    ";
 }
 function deliverChecked() {
     if (!cstDetailsForm)
         throw new Error("there is no payment form");
-    cstDetailsForm.innerHTML = "\n    <input type=\"submit\" value=\"Next\" class=\"btn\">\n    ";
+    cstDetailsForm.innerHTML += "\n    <input type=\"text\" name=\"customerAdress\" class=\"input\" placeholder=\"Enter your full adress\" required/>\n    <input type=\"submit\" value=\"Next\" class=\"btn\">\n    ";
 }
 function showPaymentForm() {
     try {
