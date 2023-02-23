@@ -42,27 +42,50 @@ function logInToAdminPage(event) {
     }
 }
 function takeawayChecked() {
-    if (!restaurantSelectList)
-        throw new Error("there is no select list for restaurant");
-    restaurantList.forEach(function (restaurant) {
-        restaurantSelectList.innerHTML += "\n    <option value=\"" + restaurant.name + "\"></option>\n    ";
-    });
-    if (!cstDetailsForm)
+    if (!adress || !restaurantSelectList)
         throw new Error("there is no payment form");
-    cstDetailsForm.innerHTML += "\n    <input type=\"submit\" value=\"Next\" class=\"btn\">\n    ";
+    restaurantList.map(function (element, key) {
+        restaurantSelectList[key] = new Option(element.name, element.name);
+    });
+    restaurantSelectList.style.display = "block";
+    adress.innerHTML = "  \n  <input type=\"submit\" value=\"Next\" class=\"btn\">";
 }
 function deliverChecked() {
-    if (!cstDetailsForm)
+    if (!adress || !restaurantSelectList)
         throw new Error("there is no payment form");
-    cstDetailsForm.innerHTML += "\n    <input type=\"text\" name=\"customerAdress\" class=\"input\" placeholder=\"Enter your full adress\" required/>\n    <input type=\"submit\" value=\"Next\" class=\"btn\">\n    ";
+    restaurantSelectList.style.display = "none";
+    adress.innerHTML = "\n    <input type=\"text\" name=\"customerAdress\" class=\"input\" placeholder=\"Enter your full adress\" required/>\n    <input type=\"submit\" value=\"Next\" class=\"btn\">\n    ";
 }
-function showPaymentForm() {
+function showPaymentForm(event) {
     try {
-        if (!paymentForm)
+        if (!paymentChoice)
             throw new Error("there is no payment form");
-        paymentForm.innerHTML = "\n    <div class=\"paymentChoice\">\n    <input type=\"radio\" name=\"payment\" class=\"input\" id=\"choice1\" onclick=\"visaCardChecked()\"/>\n    <label for=\"choice1\">Visa Card</label>\n    <input type=\"radio\" name=\"payment\" class=\"input\" id=\"choice2\"/>\n    <label for=\"choice2\">Cash</label>\n    </div>\n    ";
+        paymentChoice.innerHTML = "\n    <input type=\"radio\" name=\"payment\" class=\"input\" id=\"choice1\" onclick=\"visaCardChecked()\"/>\n    <label for=\"choice1\">Visa Card</label>\n    <input type=\"radio\" name=\"payment\" class=\"input\" id=\"choice2\" onclick=\"cashChecked()\"/>\n    <label for=\"choice2\">Cash</label>\n    ";
     }
     catch (error) {
         console.error("something don't work with the load of the customer details");
     }
+}
+function visaCardChecked() {
+    try {
+        if (!paymentDetail)
+            throw new Error("there is no payment form");
+        paymentDetail.innerHTML = "\n        <input type=\"text\" name=\"customerId\" class=\"input\" placeholder=\"Enter your id number\" required/>\n        <input type=\"radio\" name=\"payment\" class=\"input\" id=\"choice2\" onclick=\"cashChecked()\"/>\n        <label for=\"choice2\">Cash</label>\n        <input type=\"submit\" value=\"Pay\" class=\"btn\">\n        ";
+    }
+    catch (error) {
+        console.error("something don't work with the load of the customer details");
+    }
+}
+function cashChecked() {
+    try {
+        if (!paymentDetail)
+            throw new Error("there is no payment form");
+        paymentDetail.innerHTML = "\n        <input type=\"submit\" value=\"Pay\" class=\"btn\">\n        ";
+    }
+    catch (error) {
+        console.error("something don't work with the load of the customer details");
+    }
+}
+function pay(event) {
+    alert("thank you for your order");
 }

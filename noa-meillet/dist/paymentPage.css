@@ -39,3 +39,6 @@
 .customer_details .btn:hover {
   color: #c6c5c5;
 }
+.customer_details .restaurantList {
+  display: none;
+}

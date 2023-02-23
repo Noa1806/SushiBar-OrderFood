@@ -15,6 +15,7 @@
     <script src="./dist/view.js" defer></script>
     <script src="./dist/model.js" defer></script>
     <script src="./dist/control.js" defer></script>
+    <script src="./dist/helpers.js" defer></script>
     <!-- <script src="./dist/logIn.js" defer></script> -->
   </head>
 </head>
@@ -24,7 +25,7 @@
         <h1>SUSHI BAR</h1>
         <img src="../images/logo.png" alt="sushi-logo">
     </div>
-    <form class="customer_details" onsubmit="showPaymentForm()">
+    <form class="customer_details" onsubmit="showPaymentForm(event)">
         <input type="text" name="fullName" class="input" placeholder="Enter your full name" required/>
         <input type="text" name="phoneNumber" class="input" placeholder="Enter your phone number" required/>
         <input type="email" name="email" class="input" placeholder="Enter your email adress" required/>
@@ -34,9 +35,12 @@
             <input type="radio" name="adress" class="input" id="choice2" onclick="deliverChecked()"/>
             <label for="choice2">Deliver</label>
         </div>
-        <select class="restaurantList"> 
-        </select>
+        <select class="restaurantList"></select>
+        <div class="adress"></div>
     </form>
-    <form class="payment_form" onsubmit="pay()"></form>
+    <form class="payment_form" onsubmit="pay(event)">
+        <div class="paymentChoice"></div>
+        <div class="paymentDetail"></div>
+    </form>
 </body>
 </html>
