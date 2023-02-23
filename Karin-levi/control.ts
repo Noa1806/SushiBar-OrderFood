@@ -72,7 +72,7 @@ function renderMeals(): string {
                </div>
           </div>
           <div class="menu__meal__btnAdd">
-              <button>Add</button>
+              <button onclick="addToCart('${meal.uid}')">Add</button>
           </div>
       </div>
         `;
@@ -85,5 +85,21 @@ function renderMeals(): string {
         console.error(error);
         return "";
     }
+
+}
+
+let cart = new Map();
+
+
+function addToCart(uid: string) {
+    const meal = meals.find(element => element.uid == uid);
+    if (cart.has(meal)) {
+        cart.set(meal, cart.get(meal) + 1)
+    } else {
+        cart.set(meal, 1)
+    }
+
+    const cartData = JSON.stringify(cart);
+    localStorage.setItem('cart', cartData);
 
 }

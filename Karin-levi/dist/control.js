@@ -18,7 +18,7 @@ function renderMeals() {
         var html = "<div class=\"menu\">";
         html += meals
             .map(function (meal) {
-            return "\n                <br/>\n          <div class=\"menu__meal\">\n          <div class=\"menu__meal__img\"><img src=" + meal.imgLink + " alt=\"\"></div>\n          <div class=\"menu__meal__details\">\n               <div class=\"menu__meal__details__name\">" + meal.name + "</div>\n               <div class=\"menu__meal__details__detailsWrapper\">\n                  <div class=\"menu__meal__details__detailsWrapper__description\">" + meal.details + " </div>\n                  <div class=\"menu__meal__details__detailsWrapper__price\">" + meal.price + "</div>\n               </div>\n          </div>\n          <div class=\"menu__meal__btnAdd\">\n              <button>Add</button>\n          </div>\n      </div>\n        ";
+            return "\n                <br/>\n          <div class=\"menu__meal\">\n          <div class=\"menu__meal__img\"><img src=" + meal.imgLink + " alt=\"\"></div>\n          <div class=\"menu__meal__details\">\n               <div class=\"menu__meal__details__name\">" + meal.name + "</div>\n               <div class=\"menu__meal__details__detailsWrapper\">\n                  <div class=\"menu__meal__details__detailsWrapper__description\">" + meal.details + " </div>\n                  <div class=\"menu__meal__details__detailsWrapper__price\">" + meal.price + "</div>\n               </div>\n          </div>\n          <div class=\"menu__meal__btnAdd\">\n              <button onclick=\"addToCart('" + meal.uid + "')\">Add</button>\n          </div>\n      </div>\n        ";
         })
             .join(" ");
         html += "</div>";
@@ -28,4 +28,16 @@ function renderMeals() {
         console.error(error);
         return "";
     }
+}
+var cart = new Map();
+function addToCart(uid) {
+    var meal = meals.find(function (element) { return element.uid == uid; });
+    if (cart.has(meal)) {
+        cart.set(meal, cart.get(meal) + 1);
+    }
+    else {
+        cart.set(meal, 1);
+    }
+    var cartData = JSON.stringify(cart);
+    localStorage.setItem('cart', cartData);
 }

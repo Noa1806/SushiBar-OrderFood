@@ -4,6 +4,7 @@ var Meal = /** @class */ (function () {
         this.imgLink = imgLink;
         this.details = details;
         this.price = price;
+        this.uid = uid();
     }
     return Meal;
 }());
