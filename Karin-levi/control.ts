@@ -61,6 +61,7 @@ function renderMeals(): string {
         html += meals
             .map((meal) => {
                 return `
+                <br/>
           <div class="menu__meal">
           <div class="menu__meal__img"><img src=${meal.imgLink} alt=""></div>
           <div class="menu__meal__details">
