@@ -37,7 +37,7 @@ function cashChecked() {
     try {
         if (!paymentDetail)
             throw new Error("there is no payment form");
-        paymentDetail.innerHTML = "\n        <input type=\"submit\" value=\"Pay\" class=\"btn\">\n        ";
+        paymentDetail.innerHTML = "<input type=\"submit\" value=\"Pay\" class=\"btn\">";
     }
     catch (error) {
         console.error("something don't work with the load of the customer details");
