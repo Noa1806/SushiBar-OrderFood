@@ -2,7 +2,7 @@ function takeawayChecked(): void {
   if (!adress || !restaurantSelectList)
     throw new Error(`there is no payment form`);
   restaurantList.map((element, key) => {
-    restaurantSelectList[key] = new Option(element.name, element.name);
+    restaurantSelectList[key] = new Option(element.name+", "+ element.adress, element.name);
   });
   restaurantSelectList.style.display = `block`;
   adress.innerHTML = `  
@@ -19,13 +19,14 @@ function deliverChecked() {
     `;
 }
 
-function showPaymentForm(event): void {
+function showPaymentForm(e): void {
   try {
+    e.preventDefault();
     if (!paymentChoice) throw new Error(`there is no payment form`);
     paymentChoice.innerHTML = `
-    <input type="radio" name="payment" class="input" id="choice1" onclick="visaCardChecked()"/>
+    <input type="radio" name="payment" class="input" id="option1" onclick="visaCardChecked()"/>
     <label for="choice1">Visa Card</label>
-    <input type="radio" name="payment" class="input" id="choice2" onclick="cashChecked()"/>
+    <input type="radio" name="payment" class="input" id="option2" onclick="cashChecked()"/>
     <label for="choice2">Cash</label>
     `;
   } catch (error) {
@@ -37,10 +38,12 @@ function visaCardChecked() {
   try {
     if (!paymentDetail) throw new Error(`there is no payment form`);
     paymentDetail.innerHTML = `
-        <input type="text" name="cardNumber" class="input" placeholder="Enter your card number" required/>
-        <input type="text" name="cardExpired" class="input" placeholder="Enter the date of number" required/>
-        <input type="text" name="cardCvv" class="input" placeholder="Enter your id number" required/>
-        <input type="text" name="customerId" class="input" placeholder="Enter your id number" required/>
+        <div class="cardDetails">
+        <input type="text" name="cardNumber" class="input" id="cardNumber" placeholder="Enter your card number" required/>
+        <input type="text" name="cardExpired" class="input" id="cardEDate" placeholder="Enter the date of expiration" required/>
+        <input type="text" name="cardCvv" class="input" id="cardCvv" placeholder="Enter your cvv number" required/>
+        <input type="text" name="customerId" class="input" id="id" placeholder="Enter your id number" required/>
+        </div>
         <input type="submit" value="Pay" class="btn">
         `;
   } catch (error) {

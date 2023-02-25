@@ -18,14 +18,14 @@
   cursor: pointer;
 }
 
-.customer_details {
+.customer_details, .payment_form {
   display: flex;
   flex-direction: column;
   width: 50%;
   margin: 0 auto;
   gap: 10px;
 }
-.customer_details .btn {
+.customer_details .btn, .payment_form .btn {
   cursor: pointer;
   color: white;
   width: 70px;
@@ -36,9 +36,27 @@
   background-color: #A7727D;
   margin-left: 100%;
 }
-.customer_details .btn:hover {
+.customer_details .btn:hover, .payment_form .btn:hover {
   color: #c6c5c5;
 }
-.customer_details .restaurant_list {
+.customer_details .restaurant_list, .payment_form .restaurant_list {
   display: none;
+}
+.customer_details .cardDetails, .payment_form .cardDetails {
+  display: grid;
+  grid-template-areas: "cardNumber cardNumber cardNumber cardNumber" "cardEDate cardEDate cardCvv cardCvv" "id id id id";
+  margin: 0 auto;
+  gap: 10px;
+}
+.customer_details #cardNumber, .payment_form #cardNumber {
+  grid-area: cardNumber;
+}
+.customer_details #cardEDate, .payment_form #cardEDate {
+  grid-area: cardEDate;
+}
+.customer_details #cardCvv, .payment_form #cardCvv {
+  grid-area: cardCvv;
+}
+.customer_details #id, .payment_form #id {
+  grid-area: id;
 }

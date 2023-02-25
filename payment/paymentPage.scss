@@ -21,7 +21,7 @@
     }
 }
 
-.customer_details{
+.customer_details, .payment_form{
     display: flex;
     flex-direction: column;
     width:50%;
@@ -47,4 +47,19 @@
     .restaurant_list{
         display: none;
     }
+
+    .cardDetails{
+        display: grid;
+        grid-template-areas: 
+        "cardNumber cardNumber cardNumber cardNumber"
+        "cardEDate cardEDate cardCvv cardCvv"
+        "id id id id";;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    #cardNumber {grid-area: cardNumber ;}
+    #cardEDate {grid-area: cardEDate ;}
+    #cardCvv {grid-area:cardCvv ;}
+    #id {grid-area:id ;}
 }
