@@ -1,7 +1,7 @@
 var Restaurant = /** @class */ (function () {
-    function Restaurant(name, adress, phoneNumber) {
+    function Restaurant(name, address, phoneNumber) {
         this.name = name;
-        this.adress = adress;
+        this.address = address;
         this.phoneNumber = phoneNumber;
     }
     return Restaurant;

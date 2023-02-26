@@ -2,7 +2,7 @@ function takeawayChecked() {
     if (!adress || !restaurantSelectList)
         throw new Error("there is no payment form");
     restaurantList.map(function (element, key) {
-        restaurantSelectList[key] = new Option(element.name + ", " + element.adress, element.name);
+        restaurantSelectList[key] = new Option(element.name + ", " + element.address, element.name);
     });
     restaurantSelectList.style.display = "block";
     adress.innerHTML = "  \n  <input type=\"submit\" value=\"Next\" class=\"btn\">";
