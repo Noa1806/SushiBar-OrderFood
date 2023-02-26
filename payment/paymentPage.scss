@@ -1,65 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap');
-.top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 20px;
-    background-color: #EDDBC7;
-    margin-bottom: 20px;
 
-    img {
-        width: 50px;
-        aspect-ratio: 1/1;
+body{
+    scroll-behavior: smooth;
+    background-color: #F9F5E7;
+    font-family: 'Open Sans', sans-serif;
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 20px;
+        background-color: #EDDBC7;
+        margin-bottom: 20px;
+
+        img {
+            width: 50px;
+            aspect-ratio: 1/1;
+        }
+
+        h1{
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        i {
+            cursor: pointer;
+        }
     }
 
-    h1{
-        font-family: 'Open Sans', sans-serif;
-    }
-
-    i {
-        cursor: pointer;
-    }
-}
-
-.customer_details, .payment_form{
-    display: flex;
-    flex-direction: column;
-    width:50%;
-    margin: 0 auto;
-    gap: 10px;
-
-    .btn{
-        cursor: pointer;
-        color: white;
-        width: 70px;
-        height: 30px;
-        font-size: larger;
-        border: none;
-        border-radius: 5px;
-        background-color: #A7727D;
-        margin-left: 100%;
-    }
-    
-    .btn:hover{
-        color: rgb(198, 197, 197);
-    }
-
-    .restaurant_list{
-        display: none;
-    }
-
-    .cardDetails{
-        display: grid;
-        grid-template-areas: 
-        "cardNumber cardNumber cardNumber cardNumber"
-        "cardEDate cardEDate cardCvv cardCvv"
-        "id id id id";;
+    .customer_details, .payment_form{
+        display: flex;
+        flex-direction: column;
+        width:40%;
         margin: 0 auto;
         gap: 10px;
-    }
+        font-size: medium;
 
-    #cardNumber {grid-area: cardNumber ;}
-    #cardEDate {grid-area: cardEDate ;}
-    #cardCvv {grid-area:cardCvv ;}
-    #id {grid-area:id ;}
-}
+        .input, .restaurant_list {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .btn{
+            cursor: pointer;
+            color: white;
+            width: 70px;
+            height: 30px;
+            font-size: larger;
+            border: none;
+            border-radius: 5px;
+            background-color: #A7727D;
+            margin-left: 100%;
+        }
+        
+        .btn:hover{
+            color: rgb(198, 197, 197);
+        }
+
+        .restaurant_list{
+            display: none;
+        }
+
+        .cardDetails{
+            display: grid;
+            grid-template-areas: 
+            "cardNumber cardNumber cardNumber cardNumber"
+            "cardEDate cardEDate cardCvv cardCvv"
+            "id id id id";;
+            margin: 0 auto;
+            gap: 10px;
+        }
+
+        #cardNumber {grid-area: cardNumber ;}
+        #cardEDate {grid-area: cardEDate ;}
+        #cardCvv {grid-area:cardCvv ;}
+        #id {grid-area:id ;}
+    }
+} 

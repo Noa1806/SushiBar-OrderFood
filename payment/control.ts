@@ -39,10 +39,10 @@ function visaCardChecked() {
     if (!paymentDetail) throw new Error(`there is no payment form`);
     paymentDetail.innerHTML = `
         <div class="cardDetails">
-        <input type="text" name="cardNumber" class="input" id="cardNumber" placeholder="Enter your card number" required/>
-        <input type="text" name="cardExpired" class="input" id="cardEDate" placeholder="Enter the date of expiration" required/>
-        <input type="text" name="cardCvv" class="input" id="cardCvv" placeholder="Enter your cvv number" required/>
-        <input type="text" name="customerId" class="input" id="id" placeholder="Enter your id number" required/>
+        <input type="text" name="cardNumber" class="input" id="cardNumber" minlength = "16" maxlength = "16" placeholder="Enter your card number" required/>
+        <input type="month" name="cardExpired" class="input" id="cardEDate" min="2023-03" max="2033-12" required/>
+        <input type="text" name="cardCvv" class="input" id="cardCvv" minlength = "3" maxlength = "3" placeholder="Enter your cvv number" required/>
+        <input type="text" name="customerId" class="input" id="id" minlength = "9" maxlength = "9" placeholder="Enter your id number" required/>
         </div>
         <input type="submit" value="Pay" class="btn">
         `;

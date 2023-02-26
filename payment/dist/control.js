@@ -28,7 +28,7 @@ function visaCardChecked() {
     try {
         if (!paymentDetail)
             throw new Error("there is no payment form");
-        paymentDetail.innerHTML = "\n        <div class=\"cardDetails\">\n        <input type=\"text\" name=\"cardNumber\" class=\"input\" id=\"cardNumber\" placeholder=\"Enter your card number\" required/>\n        <input type=\"text\" name=\"cardExpired\" class=\"input\" id=\"cardEDate\" placeholder=\"Enter the date of expiration\" required/>\n        <input type=\"text\" name=\"cardCvv\" class=\"input\" id=\"cardCvv\" placeholder=\"Enter your cvv number\" required/>\n        <input type=\"text\" name=\"customerId\" class=\"input\" id=\"id\" placeholder=\"Enter your id number\" required/>\n        </div>\n        <input type=\"submit\" value=\"Pay\" class=\"btn\">\n        ";
+        paymentDetail.innerHTML = "\n        <div class=\"cardDetails\">\n        <input type=\"text\" name=\"cardNumber\" class=\"input\" id=\"cardNumber\" minlength = \"16\" maxlength = \"16\" placeholder=\"Enter your card number\" required/>\n        <input type=\"month\" name=\"cardExpired\" class=\"input\" id=\"cardEDate\" min=\"2023-03\" max=\"2033-12\" required/>\n        <input type=\"text\" name=\"cardCvv\" class=\"input\" id=\"cardCvv\" minlength = \"3\" maxlength = \"3\" placeholder=\"Enter your cvv number\" required/>\n        <input type=\"text\" name=\"customerId\" class=\"input\" id=\"id\" minlength = \"9\" maxlength = \"9\" placeholder=\"Enter your id number\" required/>\n        </div>\n        <input type=\"submit\" value=\"Pay\" class=\"btn\">\n        ";
     }
     catch (error) {
         console.error("something don't work with the load of the customer details");

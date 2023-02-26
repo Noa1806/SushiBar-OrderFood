@@ -14,23 +14,23 @@
     <script src="./dist/view.js" defer></script>
     <script src="./dist/model.js" defer></script>
     <script src="./dist/control.js" defer></script>
-    <!-- <script src="./dist/logIn.js" defer></script> -->
   </head>
   <body>
     <div class="logo">
       <img src="/images/logo.png" alt="logo-img" />
       <h1>SUSHI BAR</h1>
     </div>
+    <h1>WELCOME | いらっしゃいませ</h1>
     <div class="control_btn">
       <button onclick="goToCstmrPage()">Customer</button>
       <button onclick="addLogInForm()">Admin</button>
     </div>
-    <!-- LINK TO ADMIN PAGE
-          <a id="link_to_admin_page" href="./index.html"></a>
-        -->
-    <!-- LINK TO USER PAGE
-          <a id="link_to_customer_page" href="./index.html"></a>
-        -->
-    <form class="log_in_form" id="log_in_form" onsubmit="logInToAdminPage(event)"></form>
+    <a id="link_to_admin_page" href="/admin/admin.html"></a>
+    <a id="link_to_customer_page" href="/customer/index.html"></a>
+    <form
+      class="log_in_form"
+      id="log_in_form"
+      onsubmit="logInToAdminPage(event)"
+    ></form>
   </body>
 </html>

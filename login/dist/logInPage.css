@@ -16,10 +16,15 @@ body .logo img {
 body .logo h1 {
   margin: auto 5%;
 }
+body h1 {
+  margin: 2% auto;
+  height: fit-content;
+  width: fit-content;
+}
 body #log_in_form {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 0 auto;
   gap: 0;
 }
 body .control_btn, body .log_in_form {
@@ -27,7 +32,7 @@ body .control_btn, body .log_in_form {
   flex-direction: row;
   gap: 10px;
   width: max-content;
-  margin: 10% auto;
+  margin: 2% auto;
 }
 body .control_btn .input, body .log_in_form .input {
   font-family: "Ubuntu", sans-serif;

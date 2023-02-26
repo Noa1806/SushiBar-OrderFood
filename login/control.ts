@@ -2,7 +2,8 @@ function goToCstmrPage() {
   try {
     if (!logInForm) throw new Error(`there is no log In form`);
     logInForm.innerHTML = ``;
-    //ENTER THE LINK TO THE CUSTOMER PAGE
+    if (!customerLink) throw new Error(`We can't show the customer page`)
+    customerLink.click();
   } catch (error) {
     console.error(`The system failed`);
   }
@@ -36,7 +37,8 @@ function logInToAdminPage(event): void {
     } else if (password != user.password) {
       alert(`The password don't match to your user name... Try again`);
     } else {
-      //ENTER THE LINK TO THE ADMIN PAGE
+      if (!adminLink) throw new Error(`We can't show the customer page`)
+      adminLink.click();
     }
   } catch (error) {
     console.error(`something don't work with the log in function`);

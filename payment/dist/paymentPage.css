@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap");
-.top {
+body {
+  scroll-behavior: smooth;
+  background-color: #F9F5E7;
+  font-family: "Open Sans", sans-serif;
+}
+body .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,25 +12,28 @@
   background-color: #EDDBC7;
   margin-bottom: 20px;
 }
-.top img {
+body .top img {
   width: 50px;
   aspect-ratio: 1/1;
 }
-.top h1 {
+body .top h1 {
   font-family: "Open Sans", sans-serif;
 }
-.top i {
+body .top i {
   cursor: pointer;
 }
-
-.customer_details, .payment_form {
+body .customer_details, body .payment_form {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
   gap: 10px;
+  font-size: medium;
 }
-.customer_details .btn, .payment_form .btn {
+body .customer_details .input, body .customer_details .restaurant_list, body .payment_form .input, body .payment_form .restaurant_list {
+  font-family: "Ubuntu", sans-serif;
+}
+body .customer_details .btn, body .payment_form .btn {
   cursor: pointer;
   color: white;
   width: 70px;
@@ -36,27 +44,27 @@
   background-color: #A7727D;
   margin-left: 100%;
 }
-.customer_details .btn:hover, .payment_form .btn:hover {
+body .customer_details .btn:hover, body .payment_form .btn:hover {
   color: #c6c5c5;
 }
-.customer_details .restaurant_list, .payment_form .restaurant_list {
+body .customer_details .restaurant_list, body .payment_form .restaurant_list {
   display: none;
 }
-.customer_details .cardDetails, .payment_form .cardDetails {
+body .customer_details .cardDetails, body .payment_form .cardDetails {
   display: grid;
   grid-template-areas: "cardNumber cardNumber cardNumber cardNumber" "cardEDate cardEDate cardCvv cardCvv" "id id id id";
   margin: 0 auto;
   gap: 10px;
 }
-.customer_details #cardNumber, .payment_form #cardNumber {
+body .customer_details #cardNumber, body .payment_form #cardNumber {
   grid-area: cardNumber;
 }
-.customer_details #cardEDate, .payment_form #cardEDate {
+body .customer_details #cardEDate, body .payment_form #cardEDate {
   grid-area: cardEDate;
 }
-.customer_details #cardCvv, .payment_form #cardCvv {
+body .customer_details #cardCvv, body .payment_form #cardCvv {
   grid-area: cardCvv;
 }
-.customer_details #id, .payment_form #id {
+body .customer_details #id, body .payment_form #id {
   grid-area: id;
 }
