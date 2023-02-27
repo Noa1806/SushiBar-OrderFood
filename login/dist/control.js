@@ -1,26 +1,3 @@
-function goToCstmrPage() {
-    try {
-        if (!logInForm)
-            throw new Error("there is no log In form");
-        logInForm.innerHTML = "";
-        if (!customerLink)
-            throw new Error("We can't show the customer page");
-        customerLink.click();
-    }
-    catch (error) {
-        console.error("The system failed");
-    }
-}
-function addLogInForm() {
-    try {
-        if (!logInForm)
-            throw new Error("there is no log In form");
-        logInForm.innerHTML = "\n      <input type=\"text\" name=\"userName\" class=\"input\" placeholder=\"Enter your user name\" required/>\n      <br />\n      <input type=\"password\" name=\"password\" class=\"input\" placeholder=\"Enter your password\" required/>\n      <br />\n      <input type=\"submit\" id=\"log_in_btn\" value=\"Log In\"/>\n      ";
-    }
-    catch (error) {
-        console.error("The log to the system failed");
-    }
-}
 function logInToAdminPage(event) {
     try {
         event.preventDefault();

@@ -10,7 +10,7 @@
       type="image/x-icon"
     />
     <title>SushiBar-Home Page</title>
-    <link rel="stylesheet" href="./dist/logInPage.css" />
+    <link rel="stylesheet" href="./dist/adminLogInPage.css" />
     <script src="./dist/view.js" defer></script>
     <script src="./dist/model.js" defer></script>
     <script src="./dist/control.js" defer></script>
@@ -21,16 +21,13 @@
       <h1>SUSHI BAR</h1>
     </div>
     <h1>WELCOME | いらっしゃいませ</h1>
-    <div class="control_btn">
-      <button onclick="goToCstmrPage()">Customer</button>
-      <button onclick="addLogInForm()">Admin</button>
-    </div>
     <a id="link_to_admin_page" href="/admin/admin.html"></a>
-    <a id="link_to_customer_page" href="/customer/index.html"></a>
-    <form
-      class="log_in_form"
-      id="log_in_form"
-      onsubmit="logInToAdminPage(event)"
-    ></form>
+    <form class="log_in_form" id="log_in_form" onsubmit="logInToAdminPage(event)">
+        <input type="text" name="userName" class="input" placeholder="Enter your user name" required/>
+        <br />
+        <input type="password" name="password" class="input" placeholder="Enter your password" required/>
+        <br />
+        <input type="submit" id="log_in_btn" value="Log In"/>
+    </form>
   </body>
 </html>

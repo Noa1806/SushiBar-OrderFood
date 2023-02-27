@@ -27,17 +27,17 @@ body #log_in_form {
   margin: 0 auto;
   gap: 0;
 }
-body .control_btn, body .log_in_form {
+body .log_in_form {
   display: flex;
   flex-direction: row;
   gap: 10px;
   width: max-content;
   margin: 2% auto;
 }
-body .control_btn .input, body .log_in_form .input {
+body .log_in_form .input {
   font-family: "Ubuntu", sans-serif;
 }
-body .control_btn button, body .control_btn #log_in_btn, body .log_in_form button, body .log_in_form #log_in_btn {
+body .log_in_form #log_in_btn {
   cursor: pointer;
   color: white;
   width: 100px;
@@ -48,6 +48,6 @@ body .control_btn button, body .control_btn #log_in_btn, body .log_in_form butto
   background-color: #A7727D;
   margin: auto;
 }
-body .control_btn button:hover, body .control_btn #log_in_btn:hover, body .log_in_form button:hover, body .log_in_form #log_in_btn:hover {
+body .log_in_form #log_in_btn:hover {
   color: #c6c5c5;
 }

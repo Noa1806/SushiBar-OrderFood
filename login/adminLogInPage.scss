@@ -33,7 +33,7 @@ body{
         gap: 0;
     }
 
-    .control_btn, .log_in_form{
+    .log_in_form{
         display: flex;
         flex-direction: row;
         gap: 10px;
@@ -45,7 +45,7 @@ body{
             font-family: 'Ubuntu', sans-serif;
         }
     
-        button, #log_in_btn{
+        #log_in_btn{
             cursor: pointer;
             color: white;
             width: 100px;
@@ -57,7 +57,7 @@ body{
             margin: auto;
         }
         
-        button:hover, #log_in_btn:hover{
+        #log_in_btn:hover{
             color: rgb(198, 197, 197);
         }
     }
