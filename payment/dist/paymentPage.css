@@ -22,6 +22,9 @@ body .top h1 {
 body .top i {
   cursor: pointer;
 }
+body .top #link_to_home_page {
+  display: none;
+}
 body .customer_details, body .payment_form {
   display: flex;
   flex-direction: column;

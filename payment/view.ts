@@ -7,3 +7,6 @@ const paymentChoice: HTMLFormElement | null =
   document.querySelector(".payment_choice");
 const paymentDetail: HTMLFormElement | null =
   document.querySelector(".payment_detail");
+  const homeLink: HTMLAnchorElement | null = document.querySelector(
+    "#link_to_home_page"
+  );

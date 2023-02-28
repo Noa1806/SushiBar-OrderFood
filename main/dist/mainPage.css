@@ -57,7 +57,7 @@ body #img_up {
   margin: 0 20%;
   width: 15%;
   height: fit-content;
-  animation: float1 6s ease-in-out infinite;
+  animation: float1 4s ease-in-out infinite;
 }
 @media only screen and (max-width: 300px) {
   body #img_up {
@@ -79,7 +79,7 @@ body #img_down {
   margin: 1% 0 0 65%;
   width: 15%;
   height: fit-content;
-  animation: float 6s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
 }
 @media only screen and (max-width: 300px) {
   body #img_down {
