@@ -38,14 +38,14 @@ body .customer_details .input, body .customer_details .restaurant_list, body .pa
 }
 body .customer_details .btn, body .payment_form .btn {
   cursor: pointer;
+  margin: 2% 0 2% 100%;
   color: white;
-  width: 70px;
-  height: 30px;
-  font-size: larger;
+  width: 4rem;
+  height: 50%;
+  font-size: large;
   border: none;
   border-radius: 5px;
   background-color: #A7727D;
-  margin-left: 100%;
 }
 body .customer_details .btn:hover, body .payment_form .btn:hover {
   color: #c6c5c5;
@@ -64,9 +64,11 @@ body .customer_details #cardNumber, body .payment_form #cardNumber {
 }
 body .customer_details #cardEDate, body .payment_form #cardEDate {
   grid-area: cardEDate;
+  width: 100%;
 }
 body .customer_details #cardCvv, body .payment_form #cardCvv {
   grid-area: cardCvv;
+  width: 70%;
 }
 body .customer_details #id, body .payment_form #id {
   grid-area: id;

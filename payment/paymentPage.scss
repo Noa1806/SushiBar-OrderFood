@@ -43,14 +43,14 @@ body{
 
         .btn{
             cursor: pointer;
+            margin: 2% 0 2% 100%;
             color: white;
-            width: 70px;
-            height: 30px;
-            font-size: larger;
+            width: 4rem;
+            height: 50%;
+            font-size:large;
             border: none;
             border-radius: 5px;
             background-color: #A7727D;
-            margin-left: 100%;
         }
         
         .btn:hover{
@@ -72,8 +72,14 @@ body{
         }
 
         #cardNumber {grid-area: cardNumber ;}
-        #cardEDate {grid-area: cardEDate ;}
-        #cardCvv {grid-area:cardCvv ;}
+        #cardEDate {
+            grid-area: cardEDate ;
+            width: 100%;
+        }
+        #cardCvv {
+            grid-area:cardCvv ;
+            width: 70%;
+        }
         #id {grid-area:id ;}
     }
 } 
