@@ -1,4 +1,4 @@
-class Meal {
+class Product {
   uid: string;
   constructor(
     public name: string,
