@@ -32,7 +32,7 @@ const adamame = new Product(
 
 const japanesePickledVegetables = new Product(
     "Japanese Vegetables",
-    "https://uppsale.blob.core.windows.net/frameimages/thumb_rest38_2016121312514575.jpg", 
+    "https://uppsale.blob.core.windows.net/frameimages/thumb_rest38_2016121312514575.jpg",
     "Bok Choy, carrots, cucumber, served with a spicy chili and sesame sauce.",
     26
 )
@@ -152,7 +152,7 @@ const products = {
 function renderMeals(): string {
     try {
         let html = `<div class="menu">`
-        for (const product of [ "Starters", "Sushi", "Drinks"]) {
+        for (const product of ["Starters", "Sushi", "Drinks"]) {
             html += `<br/><br/> <div class="menu__productCategory">${product} </div>`
             html += products[product]
                 .map((item) => {
