@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #F9F5E7;
+}
+body .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: #EDDBC7;
+  margin-bottom: 20px;
+}
+body .top img {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+body .top i {
+  cursor: pointer;
+}
+
+.orders {
+  margin: auto;
+  width: 700px;
+  height: 1000px;
+  border: solid 2px #da0909;
+  border-radius: 20px;
+}
+.orders__products {
+  margin: auto;
+  height: 150px;
+  width: 100%;
+  border: solid 2px black;
+  border-radius: 20px;
+  display: flex;
+}
+.orders__products__img {
+  width: 400px;
+  height: 100%;
+  border: solid 2px #0cda09;
+}
+.orders__products__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.orders__products__name {
+  width: 40%;
+  height: 100%;
+  font-size: x-large;
+  font-weight: bolder;
+  padding-top: 50px;
+  margin-left: 15px;
+  border: solid 2px #0cda09;
+}
+.orders__products__price {
+  width: 15%;
+  height: 100%;
+  font-size: x-large;
+  font-weight: bolder;
+  padding-top: 50px;
+  margin-left: 15px;
+  border: solid 2px #0cda09;
+}
+.orders__products__amount {
+  width: 15%;
+  height: 100%;
+  font-size: x-large;
+  font-weight: bolder;
+  padding-top: 50px;
+  margin-left: 15px;
+  border: solid 2px #4fda09;
+}
+.orders__products__wrapperBtn {
+  width: 50%;
+  height: 100%;
+  padding-left: 100px;
+  padding-top: 20px;
+}
+.orders__products__wrapperBtn__btnAdd {
+  width: 30%;
+  height: 30%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px black;
+}
+.orders__products__wrapperBtn__btnAdd button {
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: large;
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.579);
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 55px;
+}
+.orders__products__wrapperBtn__btnRemove {
+  width: 30%;
+  height: 30%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px black;
+}
+.orders__products__wrapperBtn__btnRemove button {
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: large;
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.579);
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 55px;
+}
