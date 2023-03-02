@@ -22,8 +22,10 @@ body{
             font-family: 'Open Sans', sans-serif;
         }
 
-        i {
+        #i {
+            text-decoration: none;
             cursor: pointer;
+            color: black;
         }
 
         #link_to_home_page {display: none;}

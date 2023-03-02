@@ -19,8 +19,10 @@ body .top img {
 body .top h1 {
   font-family: "Open Sans", sans-serif;
 }
-body .top i {
+body .top #i {
+  text-decoration: none;
   cursor: pointer;
+  color: black;
 }
 body .top #link_to_home_page {
   display: none;

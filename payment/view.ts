@@ -6,7 +6,7 @@ const adress: HTMLDivElement | null = document.querySelector(".adress");
 const paymentChoice: HTMLFormElement | null =
   document.querySelector(".payment_choice");
 const paymentDetail: HTMLFormElement | null =
-  document.querySelector(".payment_detail");
+  document.querySelector(".card_details");
   const homeLink: HTMLAnchorElement | null = document.querySelector(
     "#link_to_home_page"
   );

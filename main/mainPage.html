@@ -9,7 +9,7 @@
       href="/images/favicon (2).ico"
       type="image/x-icon"
     />
-    <title>SushiBar-Home Page</title>
+    <title>SushiBar-Home</title>
     <link rel="stylesheet" href="./dist/mainPage.css" />
     <script src="./dist/view.js" defer></script>
     <script src="./dist/control.js" defer></script>
@@ -21,7 +21,14 @@
       <h1>SUSHI BAR</h1>
     </div>
     <h1>WELCOME | いらっしゃいませ</h1>
-    <div class="order_btn">
+    <img id="option_img" src="/images/option-img.png" onclick="showOption()"/>
+    <div class="more-page">
+      <a href="/restaurant/restaurant.html">Restaurants</a> <br>
+      <a href="/contact-us/contactUs.html">Contact us</a> <br>
+      <a href="/login/adminLogInPage.html">Admin</a>
+      <img src="/images/close-img.png" alt="colse-img" onclick="closeOption()">
+    </div>
+    <div class="order">
       <img src="/images/sushis-img.png" id="img_up" alt="sushi-img">
       <button class="customer_btn" onclick="goToCstmrPage()">New Order</button>
       <img src="/images/sushis-img.png" id="img_down" alt="sushi-img">
