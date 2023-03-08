@@ -21,6 +21,36 @@ body h1 {
   height: fit-content;
   width: fit-content;
 }
+body #option_img {
+  position: absolute;
+  width: 7%;
+  margin-left: 4%;
+  top: 0;
+}
+body .more-page {
+  display: none;
+  text-align: center;
+  color: white;
+  width: 60%;
+  position: absolute;
+  margin-left: 10%;
+  top: 5%;
+  background-color: rgba(79, 20, 42, 0.85);
+  z-index: 1;
+  border: 1px solid salmon;
+  border-radius: 5%;
+}
+body .more-page img {
+  position: absolute;
+  top: 1%;
+  left: 92%;
+  width: 7%;
+}
+body .more-page a {
+  color: white;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
 body #log_in_form {
   display: flex;
   flex-direction: column;

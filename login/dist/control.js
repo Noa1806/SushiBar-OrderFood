@@ -8,6 +8,16 @@ function goToHomePage() {
         console.error("The system failed");
     }
 }
+function showOption() {
+    if (!morePage)
+        throw new Error("We can't show the option page");
+    morePage.style.display = "inline";
+}
+function closeOption() {
+    if (!morePage)
+        throw new Error("We can't show the option page");
+    morePage.style.display = "none";
+}
 function logInToAdminPage(event) {
     try {
         event.preventDefault();

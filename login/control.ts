@@ -7,6 +7,16 @@ function goToHomePage() {
   }
 }
 
+function showOption(){
+  if (!morePage) throw new Error(`We can't show the option page`);
+  morePage.style.display= `inline`;
+}
+
+function closeOption(){
+  if (!morePage) throw new Error(`We can't show the option page`);
+  morePage.style.display= `none`;
+}
+
 function logInToAdminPage(event): void {
   try {
     event.preventDefault();
