@@ -37,7 +37,6 @@ body .top i {
   display: flex;
 }
 .orders__products__img {
-  width: 400px;
   height: 100%;
   border: solid 2px #0cda09;
 }
@@ -47,7 +46,7 @@ body .top i {
   border-radius: 20px;
 }
 .orders__products__name {
-  width: 40%;
+  width: 500px;
   height: 100%;
   font-size: x-large;
   font-weight: bolder;
@@ -80,42 +79,24 @@ body .top i {
   padding-top: 20px;
 }
 .orders__products__wrapperBtn__btnAdd {
-  width: 30%;
+  width: 70%;
   height: 30%;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 2px black;
-}
-.orders__products__wrapperBtn__btnAdd button {
-  width: 90px;
-  height: 40px;
-  border-radius: 10px;
-  font-size: large;
-  background-color: white;
-  border-color: rgba(0, 0, 0, 0.579);
-  font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-top: 55px;
+  border: solid 2px rgba(238, 236, 236, 0.301);
+  background-color: #A7727D;
+  color: white;
 }
 .orders__products__wrapperBtn__btnRemove {
-  width: 30%;
+  width: 70%;
   height: 30%;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 2px black;
-}
-.orders__products__wrapperBtn__btnRemove button {
-  width: 90px;
-  height: 40px;
-  border-radius: 10px;
-  font-size: large;
-  background-color: white;
-  border-color: rgba(0, 0, 0, 0.579);
-  font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-top: 55px;
+  border: solid 2px rgba(238, 236, 236, 0.301);
+  background-color: #A7727D;
+  color: white;
 }

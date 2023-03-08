@@ -43,7 +43,7 @@ body{
         
 
         &__img{
-            width: 400px;
+            // width: 500px;
             height:100%;
            
             border: solid 2px rgb(12, 218, 9);
@@ -56,7 +56,7 @@ body{
         }
 
         &__name{
-            width: 40%;
+            width: 500px;
             height:100%;
             font-size: x-large;
             font-weight: bolder;
@@ -96,51 +96,57 @@ body{
             
 
             &__btnAdd{
-                width:30%;
+                width:70%;
                 height: 30%;
                 border-radius: 20px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border: solid 2px black;
+                border: solid 2px rgba(238, 236, 236, 0.301);
+                background-color: #A7727D;
+                color: white;
+                
+                // cursor: pointer;
                 
         
-                button{
-                    width: 90px;
-                    height: 40px;
-                    border-radius: 10px;
-                    font-size: large;
-                    background-color:white;
-                    border-color: rgba(0, 0, 0, 0.579);
-                    font-weight: bold;
-                    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    margin-top: 55px;
+                // button{
+                //     width: 90px;
+                //     height: 40px;
+                //     border-radius: 10px;
+                //     font-size: large;
+                //     background-color:white;
+                //     border-color: rgba(0, 0, 0, 0.579);
+                //     font-weight: bold;
+                //     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                //     margin-top: 55px;
                    
-                }
+                // }
         
             }
         
             &__btnRemove{
-                width:30%;
+                width:70%;
                 height: 30%;
                 border-radius: 20px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border: solid 2px black;
+                border: solid 2px rgba(238, 236, 236, 0.301);
+                background-color: #A7727D;
+                color: white;
                 
         
-                button{
-                    width: 90px;
-                    height: 40px;
-                    border-radius: 10px;
-                    font-size: large;
-                    background-color:white;
-                    border-color: rgba(0, 0, 0, 0.579);
-                    font-weight: bold;
-                    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    margin-top: 55px;
-                }
+                // button{
+                //     width: 90px;
+                //     height: 40px;
+                //     border-radius: 10px;
+                //     font-size: large;
+                //     background-color:white;
+                //     border-color: rgba(0, 0, 0, 0.579);
+                //     font-weight: bold;
+                //     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                //     margin-top: 55px;
+                // }
         
             }
 
