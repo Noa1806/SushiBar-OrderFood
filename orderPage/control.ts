@@ -1,33 +1,21 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 function renderOrders(cart): string {
     try {
         let html = `<div class="orders">`
-        Object.entries(cart).forEach(([k, v]) => {
+        Object.entries(cart).forEach(([itemName, item]) => {
+            debugger
             html +=
                 `   <br/><br/>
                     <div class="orders__products">
                     <div class="orders__products__img">
-                        <img src=${v.imgLink} alt="">
+                        <img src=${item.imgLink} alt="">
                     </div>
-                    <div class="orders__products__name">${k}</div>
-                    <div class="orders__products__price">${v.price}</div>
-                    <div class="orders__products__quantity">${v.quantity}</div>
+                    <div class="orders__products__name">${itemName}</div>
+                    <div class="orders__products__price">${item.price}</div>
+                    <div id=${item.uid} class="orders__products__quantity">${item.quantity}</div>
                     <div class="orders__products__wrapperBtn">
-                        <div class="orders__products__wrapperBtn__btnAdd">Add</div>
-                        <div class="orders__products__wrapperBtn__btnRemove">Remove</div>
+                        <div onclick="addQuantity('${item.uid}')" class="orders__products__wrapperBtn__btnAdd">+</div>
+                        <div onclick="deleteQuantity('${item.uid}')" class="orders__products__wrapperBtn__btnRemove">-</div>
                     </div>
                 </div>
             `;
@@ -42,4 +30,29 @@ function renderOrders(cart): string {
         return "";
     }
 
+}
+
+
+function addQuantity(itemName: string) {
+
+    const quantityElement = document.getElementById(itemName);
+    if (quantityElement !== null) {
+        let quantity = Number(quantityElement?.innerText);
+        quantity++;
+        quantityElement.innerText = String(quantity)
+    }
+}
+
+
+function deleteQuantity(itemName: string) {
+
+    const quantityElement = document.getElementById(itemName);
+    if (quantityElement !== null) {
+        let quantity = Number(quantityElement?.innerText);
+        quantity--;
+        if (quantity >= 0) {
+            quantityElement.innerText = String(quantity)
+        }
+
+    }
 }

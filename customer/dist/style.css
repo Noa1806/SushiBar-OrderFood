@@ -98,6 +98,7 @@ body .top i {
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-top: 55px;
+  cursor: pointer;
 }
 .menu__productCategory {
   font-weight: bold;

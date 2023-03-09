@@ -2,9 +2,10 @@ function renderOrders(cart) {
     try {
         var html_1 = "<div class=\"orders\">";
         Object.entries(cart).forEach(function (_a) {
-            var k = _a[0], v = _a[1];
+            var itemName = _a[0], item = _a[1];
+            debugger;
             html_1 +=
-                "   <br/><br/>\n                    <div class=\"orders__products\">\n                    <div class=\"orders__products__img\">\n                        <img src=" + v.imgLink + " alt=\"\">\n                    </div>\n                    <div class=\"orders__products__name\">" + k + "</div>\n                    <div class=\"orders__products__price\">" + v.price + "</div>\n                    <div class=\"orders__products__quantity\">" + v.quantity + "</div>\n                    <div class=\"orders__products__wrapperBtn\">\n                        <div class=\"orders__products__wrapperBtn__btnAdd\">Add</div>\n                        <div class=\"orders__products__wrapperBtn__btnRemove\">Remove</div>\n                    </div>\n                </div>\n            ";
+                "   <br/><br/>\n                    <div class=\"orders__products\">\n                    <div class=\"orders__products__img\">\n                        <img src=" + item.imgLink + " alt=\"\">\n                    </div>\n                    <div class=\"orders__products__name\">" + itemName + "</div>\n                    <div class=\"orders__products__price\">" + item.price + "</div>\n                    <div id=" + item.uid + " class=\"orders__products__quantity\">" + item.quantity + "</div>\n                    <div class=\"orders__products__wrapperBtn\">\n                        <div onclick=\"addQuantity('" + item.uid + "')\" class=\"orders__products__wrapperBtn__btnAdd\">+</div>\n                        <div onclick=\"deleteQuantity('" + item.uid + "')\" class=\"orders__products__wrapperBtn__btnRemove\">-</div>\n                    </div>\n                </div>\n            ";
         });
         html_1 += "</div>";
         return html_1;
@@ -12,5 +13,23 @@ function renderOrders(cart) {
     catch (error) {
         console.error(error);
         return "";
+    }
+}
+function addQuantity(itemName) {
+    var quantityElement = document.getElementById(itemName);
+    if (quantityElement !== null) {
+        var quantity = Number(quantityElement === null || quantityElement === void 0 ? void 0 : quantityElement.innerText);
+        quantity++;
+        quantityElement.innerText = String(quantity);
+    }
+}
+function deleteQuantity(itemName) {
+    var quantityElement = document.getElementById(itemName);
+    if (quantityElement !== null) {
+        var quantity = Number(quantityElement === null || quantityElement === void 0 ? void 0 : quantityElement.innerText);
+        quantity--;
+        if (quantity >= 0) {
+            quantityElement.innerText = String(quantity);
+        }
     }
 }

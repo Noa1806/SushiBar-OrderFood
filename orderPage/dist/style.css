@@ -22,9 +22,8 @@ body .top i {
 }
 body .orders {
   margin: auto;
-  width: 800px;
+  width: 700px;
   height: 1000px;
-  border: solid 1px #1a09da;
   border-radius: 20px;
 }
 body .orders__products {
@@ -42,7 +41,7 @@ body .orders__products__img {
 body .orders__products__img img {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 body .orders__products__name {
   width: 500px;
@@ -51,7 +50,6 @@ body .orders__products__name {
   font-weight: bolder;
   padding-top: 50px;
   margin-left: 15px;
-  border: solid 2px #0cda09;
 }
 body .orders__products__price {
   width: 15%;
@@ -60,7 +58,6 @@ body .orders__products__price {
   font-weight: bolder;
   padding-top: 50px;
   margin-left: 15px;
-  border: solid 2px #0cda09;
 }
 body .orders__products__quantity {
   width: 15%;
@@ -68,13 +65,12 @@ body .orders__products__quantity {
   font-size: x-large;
   font-weight: bolder;
   padding-top: 50px;
-  margin-left: 15px;
-  border: solid 2px #4fda09;
+  margin-left: 55px;
 }
 body .orders__products__wrapperBtn {
   width: 50%;
   height: 100%;
-  padding-left: 100px;
+  padding-right: 70px;
   padding-top: 20px;
 }
 body .orders__products__wrapperBtn__btnAdd {
