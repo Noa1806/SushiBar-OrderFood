@@ -61,15 +61,20 @@ function renderMeals() {
         return "";
     }
 }
-var cart = new Map();
+var cart = {};
 function addToCart(uid) {
-    var meal = products.find(function (element) { return element.uid == uid; });
-    if (cart.has(meal)) {
-        cart.set(meal, cart.get(meal) + 1);
-    }
-    else {
-        cart.set(meal, 1);
-    }
-    var cartData = JSON.stringify(cart);
-    localStorage.setItem('cart', cartData);
+    Object.entries(products).forEach(function (_a) {
+        var k = _a[0], v = _a[1];
+        var meal = v.find(function (element) { return element.uid == uid; });
+        if (meal !== undefined) {
+            if (meal.name in cart) {
+                cart[meal.name]["quantity"] += 1;
+            }
+            else {
+                cart[meal.name] = { "quantity": 1, "price": meal.price, "imgLink": meal.imgLink };
+            }
+            var cartData = JSON.stringify(cart);
+            localStorage.setItem('cart', cartData);
+        }
+    });
 }

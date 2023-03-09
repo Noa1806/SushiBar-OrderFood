@@ -185,18 +185,21 @@ function renderMeals(): string {
 
 }
 
-let cart = new Map();
+let cart = {};
 
 
 function addToCart(uid: string) {
-    const meal = products.find(element => element.uid == uid);
-    if (cart.has(meal)) {
-        cart.set(meal, cart.get(meal) + 1)
-    } else {
-        cart.set(meal, 1)
-    }
+    Object.entries(products).forEach(([k, v]) => {
+        const meal = v.find(element => element.uid == uid);
+        if (meal !== undefined) {
+            if (meal.name in cart) {
+                cart[meal.name]["quantity"] += 1;
+            } else {
+                cart[meal.name] = { "quantity": 1, "price": meal.price, "imgLink": meal.imgLink };
+            }
 
-    const cartData = JSON.stringify(cart);
-    localStorage.setItem('cart', cartData);
-
+            const cartData = JSON.stringify(cart);
+            localStorage.setItem('cart', cartData);
+        }
+    })
 }

@@ -20,15 +20,14 @@ body .top img {
 body .top i {
   cursor: pointer;
 }
-
-.orders {
+body .orders {
   margin: auto;
-  width: 700px;
+  width: 800px;
   height: 1000px;
-  border: solid 2px #da0909;
+  border: solid 1px #1a09da;
   border-radius: 20px;
 }
-.orders__products {
+body .orders__products {
   margin: auto;
   height: 150px;
   width: 100%;
@@ -36,16 +35,16 @@ body .top i {
   border-radius: 20px;
   display: flex;
 }
-.orders__products__img {
+body .orders__products__img {
+  width: 500px;
   height: 100%;
-  border: solid 2px #0cda09;
 }
-.orders__products__img img {
+body .orders__products__img img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
 }
-.orders__products__name {
+body .orders__products__name {
   width: 500px;
   height: 100%;
   font-size: x-large;
@@ -54,7 +53,7 @@ body .top i {
   margin-left: 15px;
   border: solid 2px #0cda09;
 }
-.orders__products__price {
+body .orders__products__price {
   width: 15%;
   height: 100%;
   font-size: x-large;
@@ -63,7 +62,7 @@ body .top i {
   margin-left: 15px;
   border: solid 2px #0cda09;
 }
-.orders__products__amount {
+body .orders__products__quantity {
   width: 15%;
   height: 100%;
   font-size: x-large;
@@ -72,31 +71,37 @@ body .top i {
   margin-left: 15px;
   border: solid 2px #4fda09;
 }
-.orders__products__wrapperBtn {
+body .orders__products__wrapperBtn {
   width: 50%;
   height: 100%;
   padding-left: 100px;
   padding-top: 20px;
 }
-.orders__products__wrapperBtn__btnAdd {
+body .orders__products__wrapperBtn__btnAdd {
   width: 70%;
   height: 30%;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 2px rgba(238, 236, 236, 0.301);
-  background-color: #A7727D;
-  color: white;
+  color: black;
+  background-color: white;
+  font-size: large;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  cursor: pointer;
 }
-.orders__products__wrapperBtn__btnRemove {
+body .orders__products__wrapperBtn__btnRemove {
   width: 70%;
   height: 30%;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 2px rgba(238, 236, 236, 0.301);
-  background-color: #A7727D;
-  color: white;
+  color: black;
+  background-color: white;
+  font-size: large;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  cursor: pointer;
 }
