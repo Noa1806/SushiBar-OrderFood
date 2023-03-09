@@ -67,3 +67,15 @@ body hr {
   border: solid #A7727D 2px;
   border-bottom: none;
 }
+body .show_restaurants {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+body .show_restaurants hr {
+  width: 50%;
+  border: dotted #EDDBC7 6px;
+  border-bottom: none;
+}

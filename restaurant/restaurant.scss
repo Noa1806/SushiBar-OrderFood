@@ -78,4 +78,18 @@ body{
       border: solid #A7727D 2px;
       border-bottom: none;
     }
+
+    .show_restaurants{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+
+      hr{
+        width: 50%;
+        border: dotted #EDDBC7 6px;
+        border-bottom: none;
+      }
+    }
 }
