@@ -1,4 +1,4 @@
-function showRestaurant(){
+function showRestaurant():void{
     try {
         if (!restaurant) throw new Error(`We can't show the list of restaurants`);
         restaurantList.map(rest => restaurant.innerHTML+= `

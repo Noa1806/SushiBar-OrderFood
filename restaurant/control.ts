@@ -1,4 +1,4 @@
-function goToHomePage() {
+function goToHomePage():void{
     try {
       if (!homeLink) throw new Error(`We can't show the customer page`);
       homeLink.click();
@@ -7,12 +7,12 @@ function goToHomePage() {
     }
   }
   
-  function showOption(){
+  function showOption():void{
     if (!morePage) throw new Error(`We can't show the option page`);
     morePage.style.display= `inline`;
   }
   
-  function closeOption(){
+  function closeOption():void{
     if (!morePage) throw new Error(`We can't show the option page`);
     morePage.style.display= `none`;
   }

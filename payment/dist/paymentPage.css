@@ -18,6 +18,7 @@ body .top img {
 }
 body .top h1 {
   font-family: "Open Sans", sans-serif;
+  width: 60%;
 }
 body .top #i {
   text-decoration: none;
@@ -27,11 +28,21 @@ body .top #i {
 body .top #link_to_home_page {
   display: none;
 }
+body h1 {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+}
+body hr {
+  width: 90%;
+  border: solid #A7727D 2px;
+  border-bottom: none;
+}
 body .customer_details, body .payment_form {
   display: flex;
   flex-direction: column;
   width: 40%;
-  margin: 0 auto;
+  margin: 2% auto;
   gap: 10px;
   font-size: medium;
 }

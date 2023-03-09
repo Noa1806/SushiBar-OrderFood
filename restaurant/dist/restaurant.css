@@ -49,8 +49,7 @@ body .more-page {
   top: 5%;
   background-color: rgba(79, 20, 42, 0.85);
   z-index: 1;
-  border: 1px solid salmon;
-  border-radius: 5%;
+  border: 1px solid black;
 }
 body .more-page img {
   position: absolute;
@@ -60,6 +59,11 @@ body .more-page img {
 }
 body .more-page a {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-decoration: none;
+}
+body hr {
+  width: 90%;
+  border: solid #A7727D 2px;
+  border-bottom: none;
 }

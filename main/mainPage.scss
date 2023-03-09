@@ -46,8 +46,7 @@ body{
       top: 5%;
       background-color: rgb(79, 20, 42,0.85);
       z-index: 1;
-      border: 1px solid salmon;
-      border-radius: 5%;
+      border: 1px solid black;
 
       img{
         position: absolute;
@@ -58,29 +57,31 @@ body{
 
       a{
         color: white;
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-decoration: none;
       }
     }
 
+    hr{
+      width: 90%;
+      border: solid #A7727D 2px;
+      border-bottom: none;
+    }
+
     .order{   
-        
         .customer_btn{
-            margin: 2% 40%;
-            cursor: pointer;
-            color: white;
-            width: 25%;
-            height: 30px;
-            font-size: larger;
-            border: none;
-            border-radius: 5px;
-            background-color: #A7727D;
-            background: {
-              image: linear-gradient(45deg,#871838e0 50%, transparent 50%);
-              position: 100%;
-              size: 400%;
-            }
-            transition: background 300ms ease-in-out;
+          background: linear-gradient(to bottom right, #A7727D, #e13e5f);
+          border: 0;
+          border-radius: 12px;
+          color: white;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 2.5;
+          text-align: center;
+          margin: 2% 40%;
+          width: 25%;
           }
 
         @media only screen and (max-width: 570px){
@@ -96,9 +97,12 @@ body{
          }
         
         .customer_btn:hover{
-            color: rgb(220, 218, 218);
-            background-position: 0;
+            box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
         }
+
+        .customer_btn:focus{
+          box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+      }
 
         #img_up{
             margin: 0 20%;
