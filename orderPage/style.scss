@@ -24,137 +24,116 @@ body{
         }
     }
    
-}
 
-.orders{
-    margin: auto;
-    width: 700px;
-    height: 1000px;
-    border: solid 2px rgb(218, 9, 9);
-    border-radius: 20px;
-
-    &__products{
+    .orders{
         margin: auto;
-        height: 150px;
-        width: 100%;
-        border: solid 2px black;
+        width: 800px;
+        height: 1000px;
+        border: solid 1px rgb(26, 9, 218);
         border-radius: 20px;
-        display: flex;
-        
-
-        &__img{
-            // width: 500px;
-            height:100%;
-           
-            border: solid 2px rgb(12, 218, 9);
-
-            img{
-            width:100%;
-            height:100%;
+    
+        &__products{
+            margin: auto;
+            height: 150px;
+            width: 100%;
+            border: solid 2px black;
             border-radius: 20px;
-            }
-        }
-
-        &__name{
-            width: 500px;
-            height:100%;
-            font-size: x-large;
-            font-weight: bolder;
-            padding-top: 50px;
-            margin-left: 15px;
-            border: solid 2px rgb(12, 218, 9);
-        }
-
-        &__price{
-            width:15%;
-            height:100%;
-            font-size: x-large;
-            font-weight: bolder;
-            padding-top: 50px;
-            margin-left: 15px;
+            display: flex;
             
-            border: solid 2px rgb(12, 218, 9);
-        
-        }
-
-        &__amount{
-            width:15%;
-            height:100%;
-            font-size: x-large;
-            font-weight: bolder;
-            padding-top: 50px;
-            margin-left: 15px;
-        
-            border: solid 2px rgb(79, 218, 9);
-        }
-
-        &__wrapperBtn{
-            width:50%;
-            height:100%;
-            padding-left: 100px;
-            padding-top: 20px;
+    
+            &__img{
+                width: 500px;
+                height:100%;
+                // border: solid 2px rgb(12, 218, 9);
+    
+                img{
+                width:100%;
+                height:100%;
+                border-radius: 20px;
+                }
+            }
+    
+            &__name{
+                width: 500px;
+                height:100%;
+                font-size: x-large;
+                font-weight: bolder;
+                padding-top: 50px;
+                margin-left: 15px;
+                border: solid 2px rgb(12, 218, 9);
+            }
+    
+            &__price{
+                width:15%;
+                height:100%;
+                font-size: x-large;
+                font-weight: bolder;
+                padding-top: 50px;
+                margin-left: 15px;
+                border: solid 2px rgb(12, 218, 9);
             
-
-            &__btnAdd{
-                width:70%;
-                height: 30%;
-                border-radius: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: solid 2px rgba(238, 236, 236, 0.301);
-                background-color: #A7727D;
-                color: white;
-                
-                // cursor: pointer;
-                
-        
-                // button{
-                //     width: 90px;
-                //     height: 40px;
-                //     border-radius: 10px;
-                //     font-size: large;
-                //     background-color:white;
-                //     border-color: rgba(0, 0, 0, 0.579);
-                //     font-weight: bold;
-                //     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                //     margin-top: 55px;
-                   
-                // }
-        
             }
-        
-            &__btnRemove{
-                width:70%;
-                height: 30%;
-                border-radius: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: solid 2px rgba(238, 236, 236, 0.301);
-                background-color: #A7727D;
-                color: white;
-                
-        
-                // button{
-                //     width: 90px;
-                //     height: 40px;
-                //     border-radius: 10px;
-                //     font-size: large;
-                //     background-color:white;
-                //     border-color: rgba(0, 0, 0, 0.579);
-                //     font-weight: bold;
-                //     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                //     margin-top: 55px;
-                // }
-        
+    
+            &__quantity{
+                width:15%;
+                height:100%;
+                font-size: x-large;
+                font-weight: bolder;
+                padding-top: 50px;
+                margin-left: 15px;
+            
+                border: solid 2px rgb(79, 218, 9);
             }
-
+    
+            &__wrapperBtn{
+                width:50%;
+                height:100%;
+                padding-left: 100px;
+                padding-top: 20px;
+                
+    
+                &__btnAdd{
+                    width:70%;
+                    height: 30%;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: black;
+                    background-color:white;
+                    font-size: large;
+                    font-weight: bold;
+                    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    cursor: pointer;
+            
+                }
+            
+                &__btnRemove{
+                    width:70%;
+                    height: 30%;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: black;
+                    background-color:white;
+                    font-size: large;
+                    font-weight: bold;
+                    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    cursor: pointer;
+                    
+            
+                }
+    
+            }
+    
+    
         }
-
-
+    
+       
     }
 
-   
 }
+
+
 
