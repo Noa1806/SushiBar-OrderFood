@@ -22,6 +22,10 @@ body{
         i {
             cursor: pointer;
         }
+
+        h1{
+            font-family: 'Open Sans', sans-serif;
+        }
     }
    
 
@@ -75,12 +79,15 @@ body{
             }
     
             &__quantity{
-                width:15%;
-                height:100%;
+                width:20%;
+                height:20%;
                 font-size: x-large;
                 font-weight: bolder;
-                padding-top: 50px;
-                margin-left: 55px;
+                // padding-top: 50px;
+                margin-top: 50px;
+                background-color: white;
+                text-align: center;
+                
             
                 // border: solid 2px rgb(79, 218, 9);
             }
@@ -94,34 +101,62 @@ body{
                 
     
                 &__btnAdd{
-                    width:70%;
-                    height: 30%;
-                    border-radius: 20px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: black;
-                    background-color:white;
-                    font-size: large;
-                    font-weight: bold;
-                    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    // width:70%;
+                    // height: 30%;
+                    // border-radius: 20px;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    // color: black;
+                    // background-color:white;
+                    // font-size: large;
+                    // font-weight: bold;
+                    // font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    // cursor: pointer;
+
+                    background: linear-gradient(to bottom right, #A7727D, #e13e5f);
+                    border: 0;
+                    border-radius: 12px;
+                    color: white;
                     cursor: pointer;
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 2.5;
+                    text-align: center;
+                    margin: 2% 40%;
+                    width: 25%;
+                    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
             
                 }
             
                 &__btnRemove{
-                    width:70%;
-                    height: 30%;
-                    border-radius: 20px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: black;
-                    background-color:white;
-                    font-size: large;
-                    font-weight: bold;
-                    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    // width:70%;
+                    // height: 30%;
+                    // border-radius: 20px;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    // color: black;
+                    // background-color:white;
+                    // font-size: large;
+                    // font-weight: bold;
+                    // font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    // cursor: pointer;
+
+                    background: linear-gradient(to bottom right, #A7727D, #e13e5f);
+                    border: 0;
+                    border-radius: 12px;
+                    color: white;
                     cursor: pointer;
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 2.5;
+                    text-align: center;
+                    margin: 2% 40%;
+                    width: 25%;
+                    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
                     
             
                 }

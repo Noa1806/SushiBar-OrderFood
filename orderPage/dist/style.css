@@ -20,6 +20,9 @@ body .top img {
 body .top i {
   cursor: pointer;
 }
+body .top h1 {
+  font-family: "Open Sans", sans-serif;
+}
 body .orders {
   margin: auto;
   width: 700px;
@@ -60,12 +63,13 @@ body .orders__products__price {
   margin-left: 15px;
 }
 body .orders__products__quantity {
-  width: 15%;
-  height: 100%;
+  width: 20%;
+  height: 20%;
   font-size: x-large;
   font-weight: bolder;
-  padding-top: 50px;
-  margin-left: 55px;
+  margin-top: 50px;
+  background-color: white;
+  text-align: center;
 }
 body .orders__products__wrapperBtn {
   width: 50%;
@@ -74,30 +78,32 @@ body .orders__products__wrapperBtn {
   padding-top: 20px;
 }
 body .orders__products__wrapperBtn__btnAdd {
-  width: 70%;
-  height: 30%;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  background-color: white;
-  font-size: large;
-  font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient(to bottom right, #A7727D, #e13e5f);
+  border: 0;
+  border-radius: 12px;
+  color: white;
   cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  text-align: center;
+  margin: 2% 40%;
+  width: 25%;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
 }
 body .orders__products__wrapperBtn__btnRemove {
-  width: 70%;
-  height: 30%;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  background-color: white;
-  font-size: large;
-  font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient(to bottom right, #A7727D, #e13e5f);
+  border: 0;
+  border-radius: 12px;
+  color: white;
   cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  text-align: center;
+  margin: 2% 40%;
+  width: 25%;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
 }

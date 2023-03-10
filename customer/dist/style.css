@@ -20,11 +20,13 @@ body .top img {
 body .top i {
   cursor: pointer;
 }
+body .top h1 {
+  font-family: "Open Sans", sans-serif;
+}
 
 .menu {
   margin: auto;
   width: 80%;
-  height: 1000px;
   border-radius: 20px;
 }
 .menu__meal {
@@ -81,7 +83,7 @@ body .top i {
   padding-top: 30px;
 }
 .menu__meal__btnAdd {
-  width: 10%;
+  width: 20%;
   height: 100%;
   border-radius: 20px;
   display: flex;
@@ -89,18 +91,36 @@ body .top i {
   align-items: center;
 }
 .menu__meal__btnAdd button {
-  width: 90px;
-  height: 40px;
-  border-radius: 10px;
-  font-size: large;
-  background-color: white;
-  border-color: rgba(0, 0, 0, 0.579);
-  font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-top: 55px;
+  background: linear-gradient(to bottom right, #A7727D, #e13e5f);
+  border: 0;
+  border-radius: 12px;
+  color: white;
   cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  text-align: center;
+  margin: 2% 40%;
+  width: 25%;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
 }
 .menu__productCategory {
   font-weight: bold;
   font-size: xx-large;
+}
+
+.cart button {
+  background: linear-gradient(to bottom right, #A7727D, #e13e5f);
+  border: 0;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  text-align: center;
+  margin: 2% 70%;
+  width: 10%;
 }
