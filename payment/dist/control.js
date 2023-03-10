@@ -56,10 +56,9 @@ function cashChecked() {
 }
 function pay(event) {
     try {
+        event.preventDefault();
         alert('Thank You For Your Command');
-        if (!homeLink)
-            throw new Error("We can't show the customer page");
-        homeLink.click();
+        goToHomePage();
     }
     catch (error) {
         console.error("The system failed");
