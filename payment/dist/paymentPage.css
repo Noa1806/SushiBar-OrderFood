@@ -50,18 +50,25 @@ body .customer_details .input, body .customer_details .restaurant_list, body .pa
   font-family: "Ubuntu", sans-serif;
 }
 body .customer_details .btn, body .payment_form .btn {
-  cursor: pointer;
-  margin: 2% 0 2% 100%;
+  background: linear-gradient(to bottom right, #A7727D, #e13e5f);
+  border: 0;
+  border-radius: 12px;
   color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: large;
+  font-weight: 500;
+  line-height: 2.5;
+  text-align: center;
+  margin: 2% 0 2% 100%;
   width: 4rem;
   height: 50%;
-  font-size: large;
-  border: none;
-  border-radius: 5px;
-  background-color: #A7727D;
 }
 body .customer_details .btn:hover, body .payment_form .btn:hover {
-  color: #c6c5c5;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+body .customer_details .btn:focus, body .payment_form .btn:focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
 }
 body .customer_details .restaurant_list, body .payment_form .restaurant_list {
   display: none;

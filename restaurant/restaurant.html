@@ -18,7 +18,7 @@
     <script src="./dist/control.js" defer></script>
   </head>
 </head>
-<body>
+<body onload="showRestaurant()">
     <div class="top">
         <h1>SUSHI BAR</h1>
         <img src="/images/logo.png" alt="sushi-logo" onclick="goToHomePage()"> 
@@ -35,7 +35,7 @@
       <a href="/login/adminLogInPage.html">Admin</a>
       <img src="/images/close-img.png" alt="colse-img" onclick="closeOption()">
     </div>
-    <div class="show_restaurants" onload="showRestaurant()">
+    <div class="show_restaurants">
     </div>
 </body>
 </html>
