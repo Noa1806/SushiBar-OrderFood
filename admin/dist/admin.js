@@ -1,6 +1,11 @@
 //creating local storage for items for the first time only
 if (!localStorage.getItem("items")) {
     localStorage.setItem("items", JSON.stringify([]));
+    for (var i = 0; i < itemsTemp.length; i++) {
+        var element = itemsTemp[i];
+        pushToStorage(element);
+    }
+    renderToAdmin(".display", getItems());
 }
 else {
     renderToAdmin(".display", getItems());
@@ -33,11 +38,13 @@ try {
         var details = ev.target.elements.details.value;
         var img = ev.target.elements.img.value;
         var price = ev.target.elements.price.value;
-        var item = new Item(name, details, img, price);
+        var type = ev.target.elements.type.value;
+        var item = new Item(name, img, details, price, type);
         pushToStorage(item);
         if (!getItems())
             throw new Error("Item could not be added to storage");
         renderToAdmin(".display", getItems());
+        renderMeals();
         ev.target.reset();
     });
 }
@@ -75,7 +82,7 @@ function renderToAdmin(whereTo, items) {
     if (!items)
         throw new Error("Items empty");
     var html = items.map(function (item) {
-        return "\n        <div class=\"display__card\">\n            <div class=\"display__card__item\">\n                <div class=\"display__card__item__headlineImg\">\n                    <img src=\"" + item.img + "\" width=\"100px\" height=\"100px\">\n                </div>\n                <div class=\"display__card__item__details\">\n                    <h2>" + item.name + "</h2>\n                    <h5>" + item.details + "</h5>\n                    <h4>" + item.price + "$</h4>\n                </div>\n            </div>\n            <div class=\"display__card__change\">\n                <button id=\"delete\" onclick=\"deleteFromAdmin('" + item.id + "')\">Delete</button>\n                <a href=\"#change\"><button id=\"update\" onclick=\"updateFromAdmin('" + item.id + "')\">Uptade</button></a>\n            </div>\n        </div>\n        ";
+        return "\n        <div class=\"display__card\">\n            <div class=\"display__card__item\">\n                <div class=\"display__card__item__headlineImg\">\n                    <img src=\"" + item.imgLink + "\" width=\"100px\" height=\"100px\">\n                </div>\n                <div class=\"display__card__item__details\">\n                    <h2>" + item.name + "</h2>\n                    <h5>" + item.details + "</h5>\n                    <h4>" + item.price + "$</h4>\n                </div>\n            </div>\n            <div class=\"display__card__change\">\n                <button id=\"delete\" onclick=\"deleteFromAdmin('" + item.uid + "')\">Delete</button>\n                <a href=\"#change\"><button id=\"update\" onclick=\"updateFromAdmin('" + item.uid + "')\">Uptade</button></a>\n            </div>\n        </div>\n        ";
     }).join("\n");
     display.innerHTML = html;
 }
@@ -85,12 +92,13 @@ function deleteFromAdmin(id) {
         var items = getItems();
         if (!items)
             throw new Error("No items");
-        var index = items.findIndex(function (item) { return item.id == id.toString(); });
+        var index = items.findIndex(function (item) { return item.uid == id.toString(); });
         if (index == -1)
             throw new Error("Item is not in storage");
         items.splice(index, 1);
         localStorage.setItem("items", JSON.stringify(items));
         renderToAdmin(".display", getItems());
+        renderMeals();
     }
     catch (error) {
         console.error(error);
@@ -102,11 +110,11 @@ function updateFromAdmin(id) {
         var items = getItems();
         if (!items)
             throw new Error("No items");
-        var index = items.findIndex(function (item) { return item.id == id.toString(); });
+        var index = items.findIndex(function (item) { return item.uid == id.toString(); });
         if (index == -1)
             throw new Error("Item is not in storage");
         var item = items[index];
-        var html = "\n            <form class=\"form\" id=\"changeForm\">\n                <input type=\"text\" name=\"name\" placeholder=\"" + item.name + "\">\n                <textarea name=\"details\"cols=\"30\" rows=\"10\" placeholder=\"" + item.details + "\"></textarea>\n                <input type=\"number\" name=\"price\" placeholder=\"" + item.price + "\">\n                <input type=\"text\" name=\"img\" placeholder=\"" + item.img + "\">\n                <a href=\"#theForm\"><input class=\"btn\" type=\"submit\" value=\"Submit\"></a>\n            </form>\n        ";
+        var html = "\n            <form class=\"form\" id=\"changeForm\">\n                <input type=\"text\" name=\"name\" placeholder=\"" + item.name + "\">\n                <textarea name=\"details\"cols=\"30\" rows=\"10\" placeholder=\"" + item.details + "\"></textarea>\n                <input type=\"number\" name=\"price\" placeholder=\"" + item.price + "\">\n                <input type=\"text\" name=\"img\" placeholder=\"" + item.imgLink + "\">\n                <a href=\"#theForm\"><input class=\"btn\" type=\"submit\" value=\"Submit\"></a>\n            </form>\n        ";
         if (!change)
             throw new Error("HTML element not found");
         change.innerHTML = html;
@@ -139,7 +147,7 @@ function updateItem(item, index) {
                 item.price = price;
             }
             if (img) {
-                item.img = img;
+                item.imgLink = img;
             }
             var items = getItems();
             if (!items)
@@ -147,6 +155,7 @@ function updateItem(item, index) {
             items[index] = item;
             localStorage.setItem("items", JSON.stringify(items));
             renderToAdmin(".display", getItems());
+            renderMeals();
             change.innerHTML = "";
         });
     }
