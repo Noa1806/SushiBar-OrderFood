@@ -87,7 +87,7 @@
 //     `1313`
 // )
 // const pimmsCup = new Product(
-//     "Pimm's cup",
+//     "Pimms cup",
 //     "https://uppsale.blob.core.windows.net/frameazrieliimages/thumb_rest186_2022101921401507.jpg",
 //     "Pimms dessert, lychee liqueur, sour and ginger ale",
 //     54,

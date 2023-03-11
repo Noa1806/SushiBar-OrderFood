@@ -3,7 +3,6 @@ function renderOrders(cart): string {
     try {
         let html = `<div class="orders">`
         Object.entries(cart).forEach(([itemName, item]) => {
-            debugger
             html +=
                 `   <br/><br/>
                     <div class="orders__products">
@@ -41,12 +40,17 @@ function addQuantity(uid: string, itemName: string) {
         quantity++;
         quantityElement.innerText = String(quantity)
         const cartStr = localStorage.getItem('cart');
-        if(cartStr){
+        if (cartStr) {
             const cartObj = JSON.parse(cartStr);
             cartObj[itemName].quantity = quantity;
             const cartData = JSON.stringify(cartObj);
             localStorage.setItem('cart', cartData);
+
+            if (totalSumElement != null) {
+                totalSumElement.innerHTML = String(calculateTotalOrder(cartObj));
+            }
         }
+
     }
 }
 
@@ -58,14 +62,18 @@ function deleteQuantity(uid: string, itemName: string) {
         let quantity = Number(quantityElement?.innerText);
         quantity--;
         if (quantity >= 0) {
-            quantityElement.innerText = String(quantity)
-        }
-        const cartStr = localStorage.getItem('cart');
-        if(cartStr){
-            const cartObj = JSON.parse(cartStr);
-            cartObj[itemName].quantity = quantity;
-            const cartData = JSON.stringify(cartObj);
-            localStorage.setItem('cart', cartData);
+            quantityElement.innerText = String(quantity);
+            const cartStr = localStorage.getItem('cart');
+            if (cartStr) {
+                const cartObj = JSON.parse(cartStr);
+                cartObj[itemName].quantity = quantity;
+                const cartData = JSON.stringify(cartObj);
+                localStorage.setItem('cart', cartData);
+
+                if (totalSumElement != null) {
+                    totalSumElement.innerHTML = String(calculateTotalOrder(cartObj));
+                }
+            }
         }
     }
 }

@@ -34,7 +34,7 @@ var kamikazeRoll = new Item("Kamikaze Roll", "https://uppsale.blob.core.windows.
 var mexicanRoll = new Item("Mexican Roll", "https://uppsale.blob.core.windows.net/frameazrieliimages/thumb_rest186_2022061712283568.jpg", "Salmon, cucumber, avocado, zipotella mayonnaise in salmon shell, guacamole, chili in tempura and orange tobiko", 90, "Sushi");
 //drinkes
 var pinkFlow = new Item("Pink flow", "https://uppsale.blob.core.windows.net/frameazrieliimages/thumb_rest186_2022111516175347.jpg", "Ketel One, lemon juice, watermelon monin, red grapefruit monin, basil", 55, "Drinks");
-var pimmsCup = new Item("Pimm's cup", "https://uppsale.blob.core.windows.net/frameazrieliimages/thumb_rest186_2022101921401507.jpg", "Pimms dessert, lychee liqueur, sour and ginger ale", 54, "Drinks");
+var pimmsCup = new Item("Pimms cup", "https://uppsale.blob.core.windows.net/frameazrieliimages/thumb_rest186_2022101921401507.jpg", "Pimms dessert, lychee liqueur, sour and ginger ale", 54, "Drinks");
 var japanJin = new Item("Japan jin", "https://uppsale.blob.core.windows.net/frameazrieliimages/thumb_rest186_2022101921411299.jpg", "Pimms Tanqueray gin, lemon grass, lemon, yuzu, cucumber, cilantro, Mediterranean tonic garnished with dried seaweed, a sour and refreshing cocktail.", 59, "Drinks");
 var gingerBomb = new Item("Ginger bomb", "https://uppsale.blob.core.windows.net/frameazrieliimages/thumb_rest186_2022101921420836.jpg", "Ouzo, berry monin, lemon juice, ginger beer", 62, "Drinks");
 var captainCoco = new Item("Captain coco", "https://uppsale.blob.core.windows.net/frameazrieliimages/thumb_rest186_2022101921423381.jpg", "Ouzo, berry monin, Coconut sorbet, spicy Captain Morgan rum, passion fruit monin, lemon juice garnished with dried banana juice, ginger beer", 66, "Drinks");

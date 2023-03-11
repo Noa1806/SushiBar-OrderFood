@@ -6,7 +6,7 @@ function uId() {
 class Item {
     public imgLink;
     public uid: string;
-    constructor(public name: string,  imgLink: string, public details: string, public price: number, public type:string) {
+    constructor(public name: string, imgLink: string, public details: string, public price: number, public type: string) {
         this.uid = uId();
 
         if (imgLink) {
@@ -26,7 +26,7 @@ const salmonTartare = new Item(
     "https://uppsale.blob.core.windows.net/frameazrieliimages/thumb_rest186_2022102814290450.jpg",
     "On a matzah of rice, purple onion, coriander, pepper, chili, avocado and green onion",
     69,
-   "Starters"
+    "Starters"
 )
 
 const cevicheTrio = new Item(
@@ -121,7 +121,7 @@ const pinkFlow = new Item(
 )
 
 const pimmsCup = new Item(
-    "Pimm's cup",
+    "Pimms cup",
     "https://uppsale.blob.core.windows.net/frameazrieliimages/thumb_rest186_2022101921401507.jpg",
     "Pimms dessert, lychee liqueur, sour and ginger ale",
     54,
