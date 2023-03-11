@@ -11,6 +11,10 @@
     <script src="./dist/views.js" defer></script>
     <script src="./dist/models.js" defer></script>
     <script src="./dist/admin.js" defer></script>
+
+    <script src="../customer/dist/control.js" defer></script>
+    <script src="../customer/dist/view.js" defer></script>
+    <script src="../customer/dist/index.js" defer></script>
 </head>
 <body>
     <div class="top">
@@ -24,6 +28,11 @@
         <input type="text" name="name" placeholder="Name" required>
         <textarea name="details"cols="30" rows="10" placeholder="Details" required></textarea>
         <input type="number" name="price" placeholder="Price" required>
+        <select name="type" id="type">
+            <option value="Starters">Starters</option>
+            <option value="Drinks">Drinks</option>
+            <option value="Sushi">Sushi</option>
+        </select>
         <input type="text" name="img" placeholder="Image URL (optional)">
         <input class="btn" type="submit" value="Submit">
     </form>
