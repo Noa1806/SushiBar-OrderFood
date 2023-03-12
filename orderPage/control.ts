@@ -47,7 +47,7 @@ function addQuantity(uid: string, itemName: string) {
             localStorage.setItem('cart', cartData);
 
             if (totalSumElement != null) {
-                totalSumElement.innerHTML = String(calculateTotalOrder(cartObj));
+                totalSumElement.innerHTML = String(calculateTotalOrder(cartObj)) + String(" NIS");
             }
         }
 
@@ -61,18 +61,29 @@ function deleteQuantity(uid: string, itemName: string) {
     if (quantityElement !== null) {
         let quantity = Number(quantityElement?.innerText);
         quantity--;
+
         if (quantity >= 0) {
             quantityElement.innerText = String(quantity);
             const cartStr = localStorage.getItem('cart');
             if (cartStr) {
                 const cartObj = JSON.parse(cartStr);
                 cartObj[itemName].quantity = quantity;
+                if (cartObj[itemName].quantity == 0) {
+                    delete cartObj[itemName];
+                    const renderedOrders = renderOrders(cartObj)
+                    if (orderElement != null) {
+                        orderElement.innerHTML = renderedOrders
+                    }
+                }
+
                 const cartData = JSON.stringify(cartObj);
                 localStorage.setItem('cart', cartData);
 
                 if (totalSumElement != null) {
-                    totalSumElement.innerHTML = String(calculateTotalOrder(cartObj));
+                    totalSumElement.innerHTML = String(calculateTotalOrder(cartObj)) + String(" NIS");
                 }
+
+
             }
         }
     }

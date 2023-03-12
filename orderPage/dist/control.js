@@ -27,7 +27,7 @@ function addQuantity(uid, itemName) {
             var cartData = JSON.stringify(cartObj);
             localStorage.setItem('cart', cartData);
             if (totalSumElement != null) {
-                totalSumElement.innerHTML = String(calculateTotalOrder(cartObj));
+                totalSumElement.innerHTML = String(calculateTotalOrder(cartObj)) + String(" NIS");
             }
         }
     }
@@ -43,10 +43,17 @@ function deleteQuantity(uid, itemName) {
             if (cartStr) {
                 var cartObj = JSON.parse(cartStr);
                 cartObj[itemName].quantity = quantity;
+                if (cartObj[itemName].quantity == 0) {
+                    delete cartObj[itemName];
+                    var renderedOrders = renderOrders(cartObj);
+                    if (orderElement != null) {
+                        orderElement.innerHTML = renderedOrders;
+                    }
+                }
                 var cartData = JSON.stringify(cartObj);
                 localStorage.setItem('cart', cartData);
                 if (totalSumElement != null) {
-                    totalSumElement.innerHTML = String(calculateTotalOrder(cartObj));
+                    totalSumElement.innerHTML = String(calculateTotalOrder(cartObj)) + String(" NIS");
                 }
             }
         }

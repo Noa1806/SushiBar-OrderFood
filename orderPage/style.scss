@@ -43,7 +43,7 @@ body{
     .orders{
         margin: auto;
         width: 700px;
-        height: 1000px;
+        height:max-content;
         border-radius: 20px;
     
         &__products{
@@ -150,27 +150,26 @@ body{
 
 
     &__totalSum{
-        width: 100px;
+        width: 150px;
         height: 40px;
-        border: 1px solid green;
-        background-color: white;
+        background: linear-gradient(to bottom right, #A7727D, #e13e5f);
         border-radius: 12px;
-    
+        color: white;
+        font-size:x-large;
+        font-weight:bolder;
+        text-align: center;
     }
 
     button{
+        width: 150px;
+        height: 40px;
         background: linear-gradient(to bottom right, #A7727D, #e13e5f);
         border: 0;
         border-radius: 12px;
         color: white;
         cursor: pointer;
-        display: inline-block;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 2.5;
+        font-size: 20px;
         text-align: center;
-        width: 30%; 
-        
     }
 }
 
