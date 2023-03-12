@@ -8,6 +8,13 @@ if (!localStorage.getItem("items")) {
     renderToAdmin(".display", getItems());
 }
 else {
+    var str = localStorage.getItem("items");
+    if (str == "[]") {
+        for (var i = 0; i < itemsTemp.length; i++) {
+            var element = itemsTemp[i];
+            pushToStorage(element);
+        }
+    }
     renderToAdmin(".display", getItems());
 }
 //adding to storage
