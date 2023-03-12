@@ -3,7 +3,14 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   background-color: #F9F5E7;
+  font-family: "Open Sans", sans-serif;
+}
+body h1,
+body h2,
+body h3 {
+  font-family: "Ubuntu", sans-serif;
 }
 body .top {
   display: flex;

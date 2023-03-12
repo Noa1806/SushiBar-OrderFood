@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,23 +11,42 @@ html {
     scroll-behavior: smooth;
     background-color: #F9F5E7;
     font-family: 'Open Sans', sans-serif;
-    h1,h2,h3 {
+
+    h1,
+    h2,
+    h3 {
         font-family: 'Ubuntu', sans-serif;
+    }
+
+    h1{
+        font-family: 'Open Sans', sans-serif;
     }
 }
 
 button,
 .btn {
-    cursor: pointer;
+    background: linear-gradient(to bottom right, #A7727D, #e13e5f);
+    border: 0;
+    border-radius: 12px;
     color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 3px 5px;
-    background-color: #A7727D;
+    cursor: pointer;
+    display: inline-block;
+    font-size: medium;
+    font-weight: 400;
+    line-height: 2;
+    text-align: center;
+    margin: auto;
+    width: 60px;
 }
 
-button:hover, .btn:hover {
-    color: rgb(198, 197, 197);
+button:hover,
+.btn:hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+button:focus,
+.btn:focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
 #formBtn {
@@ -68,7 +88,7 @@ button:hover, .btn:hover {
         margin-bottom: 10px;
         position: relative;
         width: 60%;
-        max-width: 450px;
+        max-width: 550px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -119,12 +139,21 @@ button:hover, .btn:hover {
 }
 
 .top {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px 20px;
     background-color: #EDDBC7;
     margin-bottom: 20px;
+    height: 96.22px;
+
+    h1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
 
     img {
         width: 50px;
@@ -135,15 +164,18 @@ button:hover, .btn:hover {
         cursor: pointer;
     }
 }
-@media screen and (max-width: 590px)  {
+
+@media screen and (max-width: 750px) {
     .display {
         &__card {
             flex-direction: column;
             width: 250px;
+
             &__item {
                 width: 100%;
                 flex-direction: column;
                 height: auto;
+
                 &__headlineImg {
                     img {
                         width: 250px;
@@ -151,9 +183,10 @@ button:hover, .btn:hover {
                         object-fit: cover;
                         object-position: center;
                     }
-    
+
                     margin-right: 0px;
                 }
+
                 &__details {
                     margin-left: 10px;
                 }

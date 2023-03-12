@@ -11,25 +11,43 @@ html {
   background-color: #F9F5E7;
   font-family: "Open Sans", sans-serif;
 }
-body h1, body h2, body h3,
+body h1,
+body h2,
+body h3,
 html h1,
 html h2,
 html h3 {
   font-family: "Ubuntu", sans-serif;
 }
+body h1,
+html h1 {
+  font-family: "Open Sans", sans-serif;
+}
 
 button,
 .btn {
-  cursor: pointer;
+  background: linear-gradient(to bottom right, #A7727D, #e13e5f);
+  border: 0;
+  border-radius: 12px;
   color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 3px 5px;
-  background-color: #A7727D;
+  cursor: pointer;
+  display: inline-block;
+  font-size: medium;
+  font-weight: 400;
+  line-height: 2;
+  text-align: center;
+  margin: auto;
+  width: 60px;
 }
 
-button:hover, .btn:hover {
-  color: #c6c5c5;
+button:hover,
+.btn:hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+button:focus,
+.btn:focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
 #formBtn {
@@ -71,7 +89,7 @@ button:hover, .btn:hover {
   margin-bottom: 10px;
   position: relative;
   width: 60%;
-  max-width: 450px;
+  max-width: 550px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,12 +131,20 @@ button:hover, .btn:hover {
 }
 
 .top {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5px 20px;
   background-color: #EDDBC7;
   margin-bottom: 20px;
+  height: 96.22px;
+}
+.top h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .top img {
   width: 50px;
@@ -128,7 +154,7 @@ button:hover, .btn:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 750px) {
   .display__card {
     flex-direction: column;
     width: 250px;
