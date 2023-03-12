@@ -82,7 +82,7 @@ function renderToAdmin(whereTo: string, items: Item[] | null) {
                 <div class="display__card__item__details">
                     <h2>${item.name}</h2>
                     <h5>${item.details}</h5>
-                    <h4>${item.price}$</h4>
+                    <h4>${item.price}</h4>
                 </div>
             </div>
             <div class="display__card__change">
