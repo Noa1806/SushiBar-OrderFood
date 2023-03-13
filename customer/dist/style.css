@@ -49,22 +49,24 @@ body .top h1 {
   justify-content: space-between;
 }
 .menu__meal__img {
-  width: 15%;
+  width: 145px;
   height: 100%;
   border-radius: 20px;
 }
 .menu__meal__img img {
-  width: 100%;
+  width: 145px;
   height: 100%;
-  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
 }
 .menu__meal__details {
   width: 75%;
   height: 170px;
 }
 .menu__meal__details__name {
-  width: 25%;
-  height: 30%;
+  height: 5%;
   font-weight: bold;
   font-size: xx-large;
   padding-top: 15px;
@@ -76,7 +78,7 @@ body .top h1 {
   display: flex;
 }
 .menu__meal__details__detailsWrapper__description {
-  width: 90%;
+  width: 95%;
   height: 70%;
   font-size: large;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -84,13 +86,12 @@ body .top h1 {
   padding-left: 15px;
 }
 .menu__meal__details__detailsWrapper__price {
-  width: 10%;
   height: 100%;
   font-size: x-large;
   font-weight: bold;
   display: flex;
   justify-content: center;
-  padding-top: 30px;
+  align-items: center;
 }
 .menu__meal__btnAdd {
   width: 20%;
@@ -112,7 +113,12 @@ body .top h1 {
   line-height: 2.5;
   text-align: center;
   margin: 2% 40%;
-  width: 25%;
+  width: 40px;
+}
+.menu__meal__btnAdd button:hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+.menu__meal__btnAdd button:focus {
   box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
 }
 .menu__productCategory {
@@ -133,4 +139,53 @@ body .top h1 {
   text-align: center;
   margin: 2% 70%;
   width: 10%;
+}
+.cart button:hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+.cart button:focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+@media screen and (max-width: 900px) {
+  .menu__meal {
+    height: 200px;
+  }
+  .menu__meal__details__name {
+    font-size: x-large;
+  }
+}
+@media screen and (max-width: 830px) {
+  .menu__meal {
+    flex-direction: column;
+    height: auto;
+  }
+  .menu__meal__img {
+    width: 100%;
+    height: 170px;
+  }
+  .menu__meal__img img {
+    width: 100%;
+    height: 170px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 20px;
+  }
+  .menu__meal__details {
+    width: 85%;
+    height: auto;
+  }
+  .menu__meal__details__name {
+    height: auto;
+  }
+  .menu__meal__details__detailsWrapper__description {
+    padding-top: 20px;
+    height: auto;
+  }
+  .menu__meal__details__detailsWrapper__price {
+    height: auto;
+    margin-left: 30px;
+  }
+  .menu__meal__btnAdd {
+    margin: 10px 15px;
+  }
 }
